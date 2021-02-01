@@ -55,6 +55,30 @@ body
 	overflow-x: hidden
 	opacity: 1
 
+
+// triangle
+=triangle($direction, $size, $color)
+	content: ''
+	width: 0
+	height: 0
+	display: block
+	@if ($direction == 'up')
+		border-bottom: $size solid $color
+		border-left: 1/2*$size solid transparent
+		border-right: 1/2*$size solid transparent
+	@else if ($direction == 'down')
+		border-top: $size solid $color
+		border-left: 1/2*$size solid transparent
+		border-right: 1/2*$size solid transparent
+	@else if ($direction == 'left')
+		border-top: 1/2*$size solid transparent
+		border-bottom: 1/2*$size solid transparent
+		border-right: $size solid $color
+	@else if ($direction == 'right')
+		border-top: 1/2*$size solid transparent
+		border-bottom: 1/2*$size solid transparent
+		border-left: $size solid $color
+
 .btn
 	display: block
 	border-radius: 45px
@@ -1300,61 +1324,181 @@ header
 
 // Start Section SLider //
 
-#slider
-	.section__wrapp
-		padding: 0 15%
-		.slider__items
-			border-radius: 7px
-			box-shadow: $shadow-form
-			padding: 40px
-			padding-right: 170px
+.system
+	padding: 100px 0
+	&-container
+		max-width: 1250px
+		width: 100%
+		margin: 0 auto
+		padding: 40px
+		box-shadow: 0px 4px 25px #C9CACB
+		border-radius: 7px
+		display: flex
+		align-items: flex-end
+		justify-content: space-between
+		flex-wrap: wrap
+	.slider
+		max-width: 1000px
+		width: 100%
+	.controls
+		max-width: 130px
+		width: 100%
+		display: flex
+		flex-direction: column
+		align-items: center
+	.slide
+		display: flex !important
+		align-items: flex-start
+		justify-content: space-between
+		flex-wrap: wrap
+		&__img
+			border-right: 17px
+			display: block
+			max-width: 460px
 			width: 100%
-			.slider__items-item
-				position: relative
-				display: flex
-				.slider__items-item--img
-					border-radius: 17px
-					display: flex
-					justify-content: center
-					overflow: hidden
-					width: 100%
-					img
-						width: 515px
-						object-fit: contain
-				.slider__items-item--box
-					display: flex
-					flex-direction: column
-					width: 100%
-					margin-left: 35px
-					.slider__items-item--title
-						color: $color-text
-						h3
-							font-weight: 700
-							font-size: 34px
-							line-height: 1.3
-						span
-							color: $accent
-					.slider__items-item--description
-						color: $color-text
-						margin-top: 5px
-					.slider__items-item--text
-						margin-top: 25px
-						border-radius: 16px
-						background-color: $slider-box-bg
-						padding: 35px
-						h4
-							color: $accent
-							font-size: 24px
-							font-weight: 700
-							margin-bottom: 15px
-						p
-							line-height: 1.8
-		.slider__circle
+		&__title
+			font-size: 34px
+			font-weight: 800
+			color: #3A3A3A
+			span
+				color: #03B149
+		&__subtitle
+			color: #03B149
+			font-size: 24px
+			font-weight: 700
+			margin: 0 0 13px 0
+		&__text
+			line-height: 1.4
+			font-size: 16px
+		&-inner
+			max-width: 500px
+			width: 100%
+		&-text
+			border-radius: 16px
+			padding: 25px 40px
+			background: #E5FFE9
+			margin: 22px 0 0 0
+	.arrows
+		display: flex
+		flex-direction: column
+		align-items: center
+	.arrow
+		width: 47px
+		height: 47px
+		border-radius: 100%
+		background: white
+		box-shadow: 0px 4px 7px #CDD0D7
+		display: flex
+		align-items: center
+		justify-content: center
+		cursor: pointer
+		transition: all .3s ease
+		&:hover
+			box-shadow: 0px 14px 14px #CDD0D7
+		&_prev
+			margin: 0 0 10px 0
+			&:before
+				+triangle(left, 8px, #ABB9D2)
+		&_next
+			&:before
+				+triangle(right, 8px, #ABB9D2)
+	.progress
+		width: 120px
+		height: 120px
+		display: flex
+		align-items: center
+		justify-content: center
+		background: url('../img/progress-bg.png') no-repeat center center / contain
+		position: relative
+		margin: 0 0 20px 0
+		&-line
+			display: block
+			width: 100%
+			height: 100%
 			position: absolute
-			right: 15%
-			.slider_slider-count
-				top: 160px
-				right: 50px
+			left: 0
+			top: 0
+			transform: rotate(-90deg)
+			circle
+				// stroke-dashoffset: -330
+				stroke: #03B149
+				stroke-dasharray: 500
+				transition: all .3s ease
+	.counter
+		display: flex
+		align-items: flex-end
+		&__curr
+			color: #03B149
+			font-size: 36px
+			line-height: 1
+			font-weight: 700
+		&__all
+			font-size: 13px
+			color: #3A3A3A
+			font-weight: 700
+			&::before
+				content: '/'
+
+
+.slick-disabled
+	pointer-events: none
+	opacity: 0.5
+
+// #slider
+// 	.section__wrapp
+// 		padding: 0 15%
+// 		.slider__items
+// 			border-radius: 7px
+// 			box-shadow: $shadow-form
+// 			padding: 40px
+// 			padding-right: 170px
+// 			width: 100%
+// 			.slider__items-item
+// 				position: relative
+// 				display: flex
+// 				.slider__items-item--img
+// 					border-radius: 17px
+// 					display: flex
+// 					justify-content: center
+// 					overflow: hidden
+// 					width: 100%
+// 					img
+// 						width: 515px
+// 						object-fit: contain
+// 				.slider__items-item--box
+// 					display: flex
+// 					flex-direction: column
+// 					width: 100%
+// 					margin-left: 35px
+// 					.slider__items-item--title
+// 						color: $color-text
+// 						h3
+// 							font-weight: 700
+// 							font-size: 34px
+// 							line-height: 1.3
+// 						span
+// 							color: $accent
+// 					.slider__items-item--description
+// 						color: $color-text
+// 						margin-top: 5px
+// 					.slider__items-item--text
+// 						margin-top: 25px
+// 						border-radius: 16px
+// 						background-color: $slider-box-bg
+// 						padding: 35px
+// 						h4
+// 							color: $accent
+// 							font-size: 24px
+// 							font-weight: 700
+// 							margin-bottom: 15px
+// 						p
+// 							line-height: 1.8
+// 		.slider__circle
+// 			position: absolute
+// 			right: 15%
+// 			.slider_slider-count
+// 				top: 160px
+// 				right: 50px
 
 // Finish Section SLider //
 
@@ -2334,6 +2478,7 @@ footer
 	background-image: url('../img/offering_bg.jpg')
 	background-repeat: no-repeat
 	background-size: cover
+	text-align: center
 	&:before
 		content: ""
 		position: absolute
@@ -2344,6 +2489,9 @@ footer
 		background-color: $bg-wrapp
 		z-index: 0
 	.section__wrapp
+		max-width: 980px
+		width: 100%
+		margin: 0 auto
 		.title__wrapp
 			padding: 0
 			width: 100%
@@ -2374,11 +2522,13 @@ footer
 
 #review__singl_page
 	flex-direction: column
-	padding: 0 5%
 	.section__wrapp
-		justify-content: flex-start
+		max-width: 1610px
+		width: 100%
+		margin: 0 auto
+		// justify-content: flex-start
 		.title__wrapp
-			padding: 0
+			padding: 0 0 40px 0
 			.title__wrapp-title
 				flex-direction: row
 				.section__title
@@ -2424,14 +2574,14 @@ footer
 						box-shadow: $green-shadow-btn
 						transition: $trans
 	.review__content
-		.review__content-box	
-			width: 390px
-			margin-right: 35px
-			margin-bottom: 40px
+		width: calc( 100% + 30px )
+		margin: 0 0 0 -15px
+		.review__content-box
+			width: 510px
 			border-radius: 7px
 			box-shadow: $shadow-form
 			padding: 40px
-			float: left
+			margin: 15px
 			.review__content-box--title
 				font-weight: 700
 				font-size: 21px
@@ -2452,6 +2602,9 @@ footer
 		display: flex
 		flex-wrap: wrap
 		justify-content: center
+		max-width: 1610px
+		width: 100%
+		margin: 0 auto
 		.blog__content-box
 			margin-right: 20px
 			margin-bottom: 45px
@@ -2459,8 +2612,9 @@ footer
 			overflow: hidden
 			box-shadow: $shadow-form
 			display: flex
-			justify-content: space-between
-			width: 45%
+			// justify-content: space-between
+			width: 48%
+			margin: 1%
 			.blog__content-box--left
 				padding: 40px  
 				width: 50%
@@ -2480,10 +2634,13 @@ footer
 					.more-link
 						color: $accent
 						font-weight: 600
-			.blog__content-box-img
-				width: 50%
-				img
-					object-fit: contain
+	.blog__content-box--img
+		width: 50%
+		img
+			display: block
+			height: 100%
+			width: 100%
+			object-fit: cover
 
 // Finish Section Blog //
 
@@ -2561,6 +2718,14 @@ footer
 
 #contact
 	margin: 55px 0
+	.inner
+		max-width: 1640px
+		padding: 0 15px
+		width: 100%
+		margin: 0 auto
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
 	.contact__adres
 		border-radius: 7px
 		box-shadow: $shadow-form
@@ -2614,9 +2779,9 @@ footer
 				background-size: contain
 				margin-right: 20px
 	.map
-		margin-left: 20px
+		overflow: hidden
 		border-radius: 7px
-		width: 60%
+		width: 59%
 
 // Finish Section Contact //
 
@@ -2651,8 +2816,13 @@ footer
 #pagination
 	margin: 55px 0
 	.pagination__list
+		max-width: 1610px
+		width: 100%
+		padding: 0 15px
+		margin: 0 auto
 		display: flex
-		justify-content: space-between
+		flex-wrap: wrap
+		justify-content: center
 		.pagination__list-item
 			display: flex
 			justify-content: center
@@ -2669,6 +2839,7 @@ footer
 			.pagination__list-link
 				width: 55px
 				height: 55px
+				padding: 15px
 				color: $pagin-it-link
 				display: flex
 				align-items: center
@@ -2678,6 +2849,8 @@ footer
 			width: 150px
 			cursor: pointer
 			display: flex
+			margin: 0 auto 0 0
+			height: auto
 			&:before
 				content: ""
 				position: absolute
@@ -2685,30 +2858,32 @@ footer
 				border-top: 5px solid transparent
 				border-bottom: 5px solid transparent
 				border-right: 10px solid $pagin-it-link
-			&:after
-				content: 'Предыдущая'
-				right: 15px
-				top: 50%
-				transform: translateY(-7px)
-				position: absolute
-				color: $pagin-it-link
+			// &:after
+			// 	content: 'Предыдущая'
+			// 	right: 15px
+			// 	top: 50%
+			// 	transform: translateY(-7px)
+			// 	position: absolute
+			// 	color: $pagin-it-link
 			&:hover
 				&:before
 					border-right: 10px solid $white
-				&:after
-					color: $white
+				// &:after
+				// 	color: $white
 		.next
 			position: relative
 			width: 150px
 			cursor: pointer
 			display: flex
-			&:before
-				content: 'Следующая'
-				position: absolute
-				top: 50%
-				left: 15px
-				transform: translateY(-8px)
-				color: $pagin-it-link
+			margin: 0 0 0 auto
+			height: auto
+			// &:before
+			// 	content: 'Следующая'
+			// 	position: absolute
+			// 	top: 50%
+			// 	left: 15px
+			// 	transform: translateY(-8px)
+			// 	color: $pagin-it-link
 			&:after
 				content: ""
 				position: absolute
@@ -2717,8 +2892,8 @@ footer
 				border-bottom: 5px solid transparent
 				border-left: 10px solid $pagin-it-link
 			&:hover
-				&:before
-					color: $white
+				// &:before
+				// 	color: $white
 				&:after
 					border-left: 10px solid $white
 		.dots
@@ -2962,4 +3137,83 @@ footer
 	padding: 0
 	margin: 0 auto
 	max-width: 1610px
+
+#work-sheme
+	padding: 30px 0 70px
+	background: url('../img/work-sheme-bg.jpg') no-repeat center center / cover
+	color: white
+	.inner
+		max-width: 1196px
+		width: 100%
+		margin: 0 auto
+	.section__title
+		text-transform: uppercase
+		padding: 70px 0
+		position: relative
+		font-size: 40px
+		font-weight: 800
+		line-height: 1
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			transform: translate(0, -50%)
+			left: -65px
+			display: block
+			height: 3px
+			width: 50px
+			margin-right: 10px
+			background-color: #03B149
+			-webkit-box-shadow: 0px 1px 8px #58df76
+			box-shadow: 0px 1px 8px #58df76
+	.list
+		display: flex
+		flex-wrap: wrap
+		width: calc( 100% + 40px )
+		margin: 0 0 0 -20px
+		counter-reset: my-awesome-counter
+	.item
+		width: 100%
+		max-width: 361px
+		min-height: 190px
+		margin: 20px
+		background: white
+		box-shadow: 0px 4px 20px rgba(35, 49, 86, 0.25)
+		border-radius: 7px
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		text-align: center
+		counter-increment: my-awesome-counter
+		background-position: left center
+		background-size: contain
+		background-repeat: no-repeat
+		&:nth-child(1)
+			background-image: url('../img/sheme-icon1.png')
+		&:nth-child(2)
+			background-image: url('../img/sheme-icon2.png')
+		&:nth-child(3)
+			background-image: url('../img/sheme-icon3.png')
+		&:nth-child(4)
+			background-image: url('../img/sheme-icon4.png')
+		&:nth-child(5)
+			background-image: url('../img/sheme-icon5.png')
+		&:nth-child(6)
+			background-image: url('../img/sheme-icon6.png')
+		&:before
+			color: #1DE36D
+			display: block
+			font-weight: 800
+			font-size: 110px
+			margin: -75px 0 0 0
+			content: counter(my-awesome-counter)
+		&__text
+			color: black
+			font-weight: bold
+			font-size: 20px
+			line-height: 1.4
+			min-height: 80px
+
+
 

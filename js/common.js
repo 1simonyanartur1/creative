@@ -1,7 +1,8 @@
 (function ($) {
-  $(document).ready(function () {
+	$(document).ready(function () {
 
-		if($(document).innerWidth() < 1200) {
+
+		if ($(document).innerWidth() < 1200) {
 			$('.header__menu-top').hide();
 			$(document).on('click', '#header .burger', function () {
 				if (!$(this).hasClass('active')) {
@@ -62,6 +63,38 @@
 				}
 			}]
 		});
+		
+		
+		$('.system .slider').slick({
+			dots: false,
+			arrows: true,
+			infinite: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			prevArrow: $('.system .arrow_prev'),
+			nextArrow: $('.system .arrow_next')
+		});
+
+		var systemSlideCount = $('.system .slider').slick("getSlick").slideCount;
+		var progressPart = -330 / systemSlideCount;
+		$('.system .progress-line circle').css('stroke-dashoffset', -330 - progressPart); // начальное положение
+		$('.system .arrow_prev').on('click', function() {
+			var currProgress = parseInt($('.system .progress-line circle').css('stroke-dashoffset').replace('px', ''));
+			$('.system .progress-line circle').css('stroke-dashoffset', currProgress + progressPart);
+		});
+		$('.system .arrow_next').on('click', function() {
+			var currProgress = parseInt($('.system .progress-line circle').css('stroke-dashoffset').replace('px', ''));
+			$('.system .progress-line circle').css('stroke-dashoffset', currProgress - progressPart);
+		});
+
+		// $('.system .slider').on('afterChange', function () {
+		// 	var currProgress = $('.system .progress-line circle').css('stroke-dashoffset');
+		// 	currProgress = currProgress.replace('px', ' ');
+		// 	var finalNum = currProgress - progressPart;
+		// 	console.log(finalNum);
+		// 	$('.system .progress-line circle').css('stroke-dashoffset', finalNum);
+		// });
+
 		// Productions Slider
 		$('.product__slider').slick({
 			slidesToShow: 1,
@@ -185,7 +218,39 @@
 			]
 		});
 
-  });
+
+		// Initialize and add the map
+		function initMap() {
+			// The location
+			const centerMap = {
+				lat: 46.477946,
+				lng: 30.745294
+			};
+			// The map
+			const map = new google.maps.Map(document.getElementById("map"), {
+				zoom: 18,
+				center: centerMap,
+			});
+			// The marker
+			var marker = new google.maps.Marker({
+				position: {
+					lat: 46.477946,
+					lng: 30.745294
+				},
+				map: map
+			});
+		}
+
+		if ($('#map').length) {
+			initMap();
+		}
+
+		var $grid = $('.review__content');
+		$grid.masonry({
+			// options...
+		});
+
+	});
 })(jQuery);
 
 // Header Slick
@@ -236,6 +301,13 @@
 	};
 	$('.header__slider').on('init', function (event, slick) {
 		$('.slider-count').find($('.slider-count__all').text(PrependZeros(slick.slideCount, 2)));
+	});
+
+	$('.system .slider').on('afterChange', function (event, slick, nextSlide) {
+		$('.system .counter__curr').text(PrependZeros(nextSlide + 1, 2));
+	});
+	$('.system .slider').on('init', function (event, slick) {
+		$('.system .counter__all').text(PrependZeros(slick.slideCount, 2));
 	});
 
 	$('.product__slider').on('init', function (event, slick) {
