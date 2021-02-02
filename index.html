@@ -111,50 +111,68 @@
 					<div class="header__slider-title">
 						<p>Торговые сети</p>
 					</div>
-					<div class="header__slider">
-						<div class="header__slider-item">
-							<div class="header__slider-item--img">
-								<img src="img/slider_item-img_1.jpg" alt="">
+					<div class="slider-wrap">
+						<div class="header__slider">
+							<div class="header__slider-item">
+								<div class="header__slider-item--img">
+									<img src="img/slider_item-img_1.jpg" alt="">
+								</div>
+								<div class="header__slider-item--title">
+									<img src="img/slider_item-title.png" alt="">
+								</div>
 							</div>
-							<div class="header__slider-item--title">
-								<img src="img/slider_item-title.png" alt="">
+							<div class="header__slider-item">
+								<div class="header__slider-item--img">
+									<img src="img/slider_item-img_1.jpg" alt="">
+								</div>
+								<div class="header__slider-item--title">
+									<img src="img/slider_item-title.png" alt="">
+								</div>
 							</div>
+							<div class="header__slider-item">
+								<div class="header__slider-item--img">
+									<img src="img/slider_item-img_1.jpg" alt="">
+								</div>
+								<div class="header__slider-item--title">
+									<img src="img/slider_item-title.png" alt="">
+								</div>
+							</div>
+							<!-- <div class="header__slider-item">
+								<div class="header__slider-item--img">
+									<img src="img/slider_item-img_1.jpg" alt="">
+								</div>
+								<div class="header__slider-item--title">
+									<img src="img/slider_item-title.png" alt="">
+								</div>
+							</div>
+							<div class="header__slider-item">
+								<div class="header__slider-item--img">
+									<img src="img/slider_item-img_1.jpg" alt="">
+								</div>
+								<div class="header__slider-item--title">
+									<img src="img/slider_item-title.png" alt="">
+								</div>
+							</div>
+							<div class="header__slider-item">
+								<div class="header__slider-item--img">
+									<img src="img/slider_item-img_1.jpg" alt="">
+								</div>
+								<div class="header__slider-item--title">
+									<img src="img/slider_item-title.png" alt="">
+								</div>
+							</div>
+							<div class="header__slider-item">
+								<div class="header__slider-item--img">
+									<img src="img/slider_item-img_1.jpg" alt="">
+								</div>
+								<div class="header__slider-item--title">
+									<img src="img/slider_item-title.png" alt="">
+								</div>
+							</div> -->
 						</div>
-						<div class="header__slider-item">
-							<div class="header__slider-item--img">
-								<img src="img/slider_item-img_1.jpg" alt="">
-							</div>
-							<div class="header__slider-item--title">
-								<img src="img/slider_item-title.png" alt="">
-							</div>
+						<div class="header__main-more">
+							<a href="#work" class="header__main-btn anchor">Посмотреть все работы</a>
 						</div>
-						<div class="header__slider-item">
-							<div class="header__slider-item--img">
-								<img src="img/slider_item-img_1.jpg" alt="">
-							</div>
-							<div class="header__slider-item--title">
-								<img src="img/slider_item-title.png" alt="">
-							</div>
-						</div>
-						<div class="header__slider-item">
-							<div class="header__slider-item--img">
-								<img src="img/slider_item-img_1.jpg" alt="">
-							</div>
-							<div class="header__slider-item--title">
-								<img src="img/slider_item-title.png" alt="">
-							</div>
-						</div>
-						<div class="header__slider-item">
-							<div class="header__slider-item--img">
-								<img src="img/slider_item-img_1.jpg" alt="">
-							</div>
-							<div class="header__slider-item--title">
-								<img src="img/slider_item-title.png" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="header__main-more">
-						<a href="#work" class="header__main-btn anchor">Посмотреть все работы</a>
 					</div>
 					<div class="arrows">
 						<div class="btn_slick btn_prev"></div>
@@ -168,6 +186,7 @@
 			</div>
 		</div>
 	</header>
+
 	<section id="privilege">
 		<div class="section__wrapp">
 			<div class="privilege__items">
@@ -1029,8 +1048,14 @@
 						<input type="tel" class="offering__form-input" placeholder="Введите телефон">
 						<input type="text" class="offering__form-input" placeholder="E-mail">
 						<textarea name="" id="" placeholder="Сообщение" class="offering__form-textarea" rows="4"></textarea>
-						<label for="input__file" class="add_file">Прикрепить файл</label>
-						<input type="file" name="file" id="input__file" style="display: none">
+						
+						<div class="fileinput-wrap">
+							<input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} файлa(ов) выбрано" multiple />
+							<label for="file"><span>Прикрепить файл</span></label>
+						</div>
+
+						<!-- <label for="input__file" class="add_file">Прикрепить файл</label>
+						<input type="file" name="file" id="input__file" style="display: none"> -->
 						<button class="btn offering__form-btn"><span>Получить рассчет</span></button>
 						<label for="" class="offering__form-label">* Нажимая кнопку, вы соглашаетесь с условиями политики
 							конфиденциальности</label>
@@ -1039,6 +1064,7 @@
 			</div>
 		</div>
 	</section>
+
 	<footer id="footer">
 		<div class="section__wrapp">
 			<div class="footer__logo">

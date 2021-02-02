@@ -87,14 +87,6 @@
 			$('.system .progress-line circle').css('stroke-dashoffset', currProgress - progressPart);
 		});
 
-		// $('.system .slider').on('afterChange', function () {
-		// 	var currProgress = $('.system .progress-line circle').css('stroke-dashoffset');
-		// 	currProgress = currProgress.replace('px', ' ');
-		// 	var finalNum = currProgress - progressPart;
-		// 	console.log(finalNum);
-		// 	$('.system .progress-line circle').css('stroke-dashoffset', finalNum);
-		// });
-
 		// Productions Slider
 		$('.product__slider').slick({
 			slidesToShow: 1,
@@ -169,55 +161,52 @@
 			slidesToScroll: 1,
 			fade: true,
 			arrows: false,
-			wirableWidth: true,
-			asNavFor: '.page__subslider',
+			asNavFor: '.page__subslider'
 		});
 		$('.page__subslider').slick({
-			slidesToShow: 3,
+			slidesToShow: 4,
 			slidesToScroll: 1,
 			asNavFor: '.page__slider',
 			dots: false,
-			wirableWidth: true,
+			variableWidth: true,
 			arrows: true,
-			prevArrow: '<div class="btn_slick btn_slick5 btn_prev btn_prev5"></div>',
-			nextArrow: '<div class="btn_slick btn_slick5 btn_next btn_next5"></div>',
-			centerMode: true,
+			prevArrow: $('#page-slider .btn_prev'),
+			nextArrow: $('#page-slider .btn_next'),
 			focusOnSelect: true,
-			responsive: [{
-					breakpoint: 1284,
-					settings: {
-						arrows: false,
-						slidesToShow: 2,
-						slidesToScroll: 1,
-					}
-				},
-				{
-					breakpoint: 1024,
-					settings: {
-						arrows: false,
-						slidesToShow: 2,
-						slidesToScroll: 1,
-					}
-				},
-				{
-					breakpoint: 768,
-					settings: {
-						arrows: false,
-						slidesToShow: 1,
-						slidesToScroll: 1,
-					}
-				},
-				{
-					breakpoint: 425,
-					settings: {
-						arrows: false,
-						slidesToShow: 1,
-						slidesToScroll: 1,
-					}
-				}
-			]
+			// responsive: [{
+			// 		breakpoint: 1284,
+			// 		settings: {
+			// 			arrows: false,
+			// 			slidesToShow: 2,
+			// 			slidesToScroll: 1,
+			// 		}
+			// 	},
+			// 	{
+			// 		breakpoint: 1024,
+			// 		settings: {
+			// 			arrows: false,
+			// 			slidesToShow: 2,
+			// 			slidesToScroll: 1,
+			// 		}
+			// 	},
+			// 	{
+			// 		breakpoint: 768,
+			// 		settings: {
+			// 			arrows: false,
+			// 			slidesToShow: 1,
+			// 			slidesToScroll: 1,
+			// 		}
+			// 	},
+			// 	{
+			// 		breakpoint: 425,
+			// 		settings: {
+			// 			arrows: false,
+			// 			slidesToShow: 1,
+			// 			slidesToScroll: 1,
+			// 		}
+			// 	}
+			// ]
 		});
-
 
 		// Initialize and add the map
 		function initMap() {
@@ -245,10 +234,13 @@
 			initMap();
 		}
 
+
 		var $grid = $('.review__content');
-		$grid.masonry({
-			// options...
-		});
+		if($grid.length) {
+			$grid.masonry({
+				// options...
+			});
+		}
 
 	});
 })(jQuery);
@@ -406,22 +398,31 @@
 })(jQuery);
 
 
+(function (document, window, index) {
+	var inputs = document.querySelectorAll('.inputfile');
+	Array.prototype.forEach.call(inputs, function (input) {
+		var label = input.nextElementSibling,
+			labelVal = label.innerHTML;
 
-// $(document).ready(function () {
-// 	$('#review__content').masonry({
-// 		// указываем элемент-контейнер в котором расположены блоки для динамической верстки
-// 		itemSelector: '.review__content-box',
-// 		// указываем класс элемента являющегося блоком в нашей сетке
-// 		singleMode: false,
-// 		// true - если у вас все блоки одинаковой ширины
-// 		isResizable: true,
-// 		// перестраивает блоки при изменении размеров окна
-// 		isAnimated: true,
-// 		// анимируем перестроение блоков
-// 		animationOptions: {
-// 			queue: false,
-// 			duration: 500
-// 		}
-// 		// опции анимации - очередь и продолжительность анимации
-// 	});
-// });
+		input.addEventListener('change', function (e) {
+			var fileName = '';
+			if (this.files && this.files.length > 1)
+				fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+			else
+				fileName = e.target.value.split('\\').pop();
+
+			if (fileName)
+				label.querySelector('span').innerHTML = fileName;
+			else
+				label.innerHTML = labelVal;
+		});
+
+		// Firefox bug fix
+		input.addEventListener('focus', function () {
+			input.classList.add('has-focus');
+		});
+		input.addEventListener('blur', function () {
+			input.classList.remove('has-focus');
+		});
+	});
+}(document, window, 0));

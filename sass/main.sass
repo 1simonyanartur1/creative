@@ -291,22 +291,22 @@ body
 		box-shadow: $product-slider-btn-shadow
 		&:before
 			border-left: 10px solid $product-slider-title-bg
-.btn_slick5
-	background: $white
-	&:hover
-		box-shadow: none
-.btn_prev5
-	top: -160px
-	right: 250px
-	position: absolute
-	&:before
-		border-right: 10px solid $product-slider-title-bg
-.btn_next5
-	top: -160px
-	right: 160px
-	position: absolute
-	&:before
-		border-left: 10px solid $product-slider-title-bg
+// .btn_slick5
+// 	background: $white
+// 	&:hover
+// 		box-shadow: none
+// .btn_prev5
+// 	top: 0
+// 	right: 0
+// 	position: absolute
+// 	&:before
+// 		border-right: 10px solid $product-slider-title-bg
+// .btn_next5
+// 	top: 0
+// 	right: 0
+// 	position: absolute
+// 	&:before
+// 		border-left: 10px solid $product-slider-title-bg
 .slider-count
 	// margin-top: 130px
 	// padding-left: 570px
@@ -771,11 +771,10 @@ header
 					font-size: 14px
 		.header__main-right
 			width: 50%
-			// margin-top: 55px
-			// padding-right: 16%
 			display: flex
 			flex-direction: column
 			align-items: flex-end
+			position: relative
 			.header__slider-title
 				margin-top: 70px
 				padding-left: 450px
@@ -785,11 +784,14 @@ header
 				font-weight: 700
 				font-size: 18px
 				letter-spacing: 2px
+			.slider-wrap
+				position: relative
+				width: 100%
 			.header__slider
 				margin-top: 20px
-				width: 100%
+				width: calc( 100% + 30px )
 				.header__slider-item
-					padding: 0 5px
+					margin: 25px
 					.header__slider-item--img
 						overflow: hidden
 						img
@@ -803,7 +805,6 @@ header
 						justify-content: flex-end
 						img
 							width: 270px
-							object-fit: cover
 			.header__main-down
 				display: flex
 				justify-content: flex-start
@@ -812,9 +813,10 @@ header
 				display: flex
 				justify-content: flex-start
 				width: 100%
+				position: absolute
+				bottom: 30px
+				left: 30px
 				.header__main-btn
-					position: absolute
-					top: -58px
 					display: flex
 					align-items: center
 					border-radius: 45px
@@ -838,6 +840,17 @@ header
 		display: flex
 		flex-wrap: wrap
 		align-items: flex-start
+
+	&.type3
+		.header__main-right .header__main-more
+			position: static
+		.header__slider
+			margin: 0 0 0 -15px
+		.header__slider-item
+			box-shadow: 0px 4px 24px 0px rgba(255, 255, 255, 0.8)
+			border-radius: 15px
+			overflow: hidden
+
 
 .logo
 	&__img
@@ -1650,9 +1663,6 @@ header
 		display: flex
 		align-items: center
 		margin: 0 -15px 0 0
-	.btn_prev
-	.btn_next
-
 	.section__wrapp
 		margin: 0 auto
 		max-width: 1540px
@@ -1944,22 +1954,6 @@ header
 						&::placeholder
 							color: #7C7E86
 							font-size: 14px
-					.add_file
-						color: $accent
-						position: relative
-						margin-right: 20px
-						&:after
-							content: ""
-							position: absolute
-							right: -20px
-							top: 2px
-							display: block
-							background-image: url('../img/paper-clip.svg')
-							background-repeat: no-repeat
-							background-position: center
-							background-size: contain
-							height: 13px
-							width: 13px
 					.offering__form-btn
 						display: flex
 						align-items: center
@@ -2267,49 +2261,58 @@ footer
 #page-slider
 	position: relative
 	background-color: $bg-section
-	padding: 0
-	.section__wrapp	
-		padding-left: 5%
-		.sliders-wrapp
-			display: flex
+	padding: 50px 0 80px 0
+	.section__wrapp
+		max-width: 1640px
+		width: 100%
+		margin: 0 auto
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		position: relative
+		padding: 0 15px
+		.page__slider
+			max-width: 630px
 			width: 100%
-			.page__slider
-				width: 640px
-				.page__slider-item
-					width: 640px
-					.page__slider-item--img
-						img
-							max-width: 640px
-							object-fit: contain
-			.slider__items-item--box
-				width: 60%
-				margin-left: 35px
-				overflow: hidden
-				display: flex
-				flex-direction: column
-				justify-content: space-between
-				.title__wrapp
+			.page__slider-item
+				.page__slider-item--img
+					img
+						width: 100%
+		.slider__items-item--box
+			max-width: 920px
+			width: 100%
+			.title__wrapp
+				padding: 0
+				flex-wrap: wrap
+				.title__wrapp-title
 					padding: 0
-					.title__wrapp-title
+					margin-top: 30px
+					.section__title
 						padding: 0
-						margin-top: 30px
-						.section__title
-							padding: 0
-							&:before
-								display: none
-						.section__text
-							margin-top: 10px
-							h3
-								color: $white
-							span
-				.page__subslider
-					.page__subslider-item
-						margin-right: 35px
-						width: 320px
-						.page__subslider-item--img
-							img
-								max-width: 320px
-								object-fit: contain
+						&:before
+							display: none
+					.section__text
+						margin-top: 10px
+						h3
+							color: $white
+						span
+			.page__subslider
+				width: 125%
+				margin: 80px 0 0 0
+				.page__subslider-item
+					margin-right: 25px
+					width: 320px
+					img
+						width: 100%
+	.arrows
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		position: absolute
+		right: 0
+		top: 50px
+		.btn_slick
+			margin: 0 20px
 
 // Finish Section Page-Slider //
 
@@ -2317,8 +2320,14 @@ footer
 
 #proposition
 	position: relative
+	padding: 80px 0
 	.section__wrapp
+		max-width: 1740px
+		width: 100%
+		margin: 0 auto
 		flex-direction: column
+		.title__wrapp
+			padding: 0 0 0 70px
 		.section__title
 			color: $black
 		.proposition__main
@@ -2328,15 +2337,15 @@ footer
 				display: flex
 				flex-direction: row
 				flex-wrap: wrap
-				justify-content: center
+				justify-content: flex-start
 				margin-top: 30px
 				.proposition__items-item
 					position: relative
-					margin-right: 10px
-					margin-bottom: 10px
-					display: flex
-					align-items: flex-end
-					width: 430px
+					margin: .5%
+					width: 24%
+					img
+						display: block
+						width: 100%
 					&:before
 						content: ""
 						position: absolute
@@ -2352,14 +2361,21 @@ footer
 						width: 100%
 						height: 100%
 					.proposition__items-item--link
+						display: flex
+						align-items: flex-end
 						position: absolute
 						color: $white
+						width: 100%
 						font-size: 20px
 						font-weight: 800
 						text-transform: uppercase
-						margin-left: 25px
-						margin-bottom: 25px
+						padding: 25px
 						z-index: 2
+						position: absolute
+						left: 0
+						top: 0
+						right: 0
+						bottom: 0
 						span
 							&:before
 								content: "—"
@@ -2523,10 +2539,10 @@ footer
 #review__singl_page
 	flex-direction: column
 	.section__wrapp
-		max-width: 1610px
+		max-width: 1660px
 		width: 100%
 		margin: 0 auto
-		// justify-content: flex-start
+		padding: 0 20px
 		.title__wrapp
 			padding: 0 0 40px 0
 			.title__wrapp-title
@@ -2577,11 +2593,11 @@ footer
 		width: calc( 100% + 30px )
 		margin: 0 0 0 -15px
 		.review__content-box
-			width: 510px
+			width: 31.3%
 			border-radius: 7px
 			box-shadow: $shadow-form
 			padding: 40px
-			margin: 15px
+			margin: 1%
 			.review__content-box--title
 				font-weight: 700
 				font-size: 21px
@@ -3216,4 +3232,47 @@ footer
 			min-height: 80px
 
 
+
+
+.fileinput-wrap
+	position: relative
+	width: 100%
+	display: flex
+	align-items: center
+	justify-content: flex-end
+	text-align: right
+	input
+		width: 0.1px
+		height: 0.1px
+		opacity: 0
+		overflow: hidden
+		position: absolute
+		z-index: -1
+		& + label
+			font-size: 1em
+			color: white
+			background-color: transparent
+			display: inline-block
+			cursor: pointer
+			color: $accent
+			position: relative
+			margin-right: 20px
+			transition: all .3s ease-out
+			&:after
+				content: ""
+				position: absolute
+				right: -20px
+				top: 2px
+				display: block
+				background-image: url('../img/paper-clip.svg')
+				background-repeat: no-repeat
+				background-position: center
+				background-size: contain
+				height: 13px
+				width: 13px
+		&:focus + label,
+		& + label:hover
+			color: black
+		& *
+			pointer-events: none
 
