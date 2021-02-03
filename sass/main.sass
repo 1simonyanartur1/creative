@@ -411,11 +411,11 @@ body
 				text-transform: uppercase
 				h2
 					font-weight: 800
-					font-size: 40px
+					font-size: 36px
 				&:before
 					content: ""
 					position: absolute
-					top: 22px
+					top: 20px
 					left: -65px
 					display: block
 					height: 3px
@@ -743,7 +743,7 @@ header
 				h1
 					text-transform: uppercase
 					font-weight: 800
-					font-size: 50px
+					font-size: 45px
 					line-height: 1.5
 			.header__main-content
 				margin-top: 65px
@@ -1452,6 +1452,132 @@ header
 			&::before
 				content: '/'
 
+.system-type2
+	padding: 100px 0
+	&.type2
+		.slide__title
+			text-transform: none
+			font-size: 24px
+	&-container
+		width: 100%
+		margin: 0 auto
+		padding: 40px
+		box-shadow: 0px 4px 25px #C9CACB
+		border-radius: 7px
+		display: flex
+		align-items: flex-end
+		justify-content: space-between
+		flex-wrap: wrap
+	.slider
+		max-width: 1000px
+		width: 100%
+	.controls
+		max-width: 130px
+		width: 100%
+		display: flex
+		flex-direction: column
+		align-items: center
+	.slide
+		display: flex !important
+		align-items: flex-start
+		justify-content: space-between
+		flex-wrap: wrap
+		&__img
+			border-right: 17px
+			display: block
+			max-width: 460px
+			width: 100%
+		&__title
+			font-size: 40px
+			text-transform: uppercase
+			font-weight: 800
+			color: #3A3A3A
+			margin: 0 0 10px 0
+			&::before
+				content: ''
+				display: block
+				width: 51px
+				height: 3px
+				background: #03B149
+				box-shadow: 0px 1px 8px #58DF76
+				margin: 0 0 10px 0
+			span
+				color: #03B149
+		&__subtitle
+			color: #03B149
+			font-size: 24px
+			font-weight: 700
+			margin: 0 0 13px 0
+		&__text
+			line-height: 1.4
+			font-size: 16px
+		&-inner
+			max-width: 500px
+			width: 100%
+		&-text
+			margin: 22px 0 0 0
+	.arrows
+		display: flex
+		flex-direction: column
+		align-items: center
+	.arrow
+		width: 47px
+		height: 47px
+		border-radius: 100%
+		background: white
+		box-shadow: 0px 4px 7px #CDD0D7
+		display: flex
+		align-items: center
+		justify-content: center
+		cursor: pointer
+		transition: all .3s ease
+		&:hover
+			box-shadow: 0px 14px 14px #CDD0D7
+		&_prev
+			margin: 0 0 10px 0
+			&:before
+				+triangle(left, 8px, #ABB9D2)
+		&_next
+			&:before
+				+triangle(right, 8px, #ABB9D2)
+	.progress
+		width: 120px
+		height: 120px
+		display: flex
+		align-items: center
+		justify-content: center
+		background: url('../img/progress-bg.png') no-repeat center center / contain
+		position: relative
+		margin: 0 0 20px 0
+		&-line
+			display: block
+			width: 100%
+			height: 100%
+			position: absolute
+			left: 0
+			top: 0
+			transform: rotate(-90deg)
+			circle
+				// stroke-dashoffset: -330
+				stroke: #03B149
+				stroke-dasharray: 500
+				transition: all .3s ease
+	.counter
+		display: flex
+		align-items: flex-end
+		&__curr
+			color: #03B149
+			font-size: 36px
+			line-height: 1
+			font-weight: 700
+		&__all
+			font-size: 13px
+			color: #3A3A3A
+			font-weight: 700
+			&::before
+				content: '/'
+
+
 
 .slick-disabled
 	pointer-events: none
@@ -2057,32 +2183,45 @@ footer
 // Start Section Page //
 
 #page
+	padding: 25px 0
 	.section__wrapp
-		margin-top: 0
-		padding: 0 15%
+		margin: 0 auto
+		max-width: 1280px
+		padding: 0 15px
+		width: 100%
 		.page__content
-			display: flex
-			flex-direction: column
-			align-items: center
+			&.big-center
+				text-align: center
+				.page__box
+					max-width: 1020px
+					width: 100%
+					margin: 0 auto
+					.page__box-content
+						max-width: 100%
 			.page__content-item
 				border-radius: 7px
 				box-shadow: $shadow-form
 				display: flex
+				align-items: flex-start
+				justify-content: space-between
+				flex-wrap: wrap
 				margin: 30px 0
 				padding: 40px
-				&:last-child
-					margin-bottom: 0
 				.page__content-item--photo
-					border-radius: 10px
-					margin-right: 35px
-					&:last-child
-						margin-right: 0
+					max-width: 510px
+					width: 100%
 					img
-						width: 515px
-						object-fit: contain
+						display: block
+						width: 100%
+						border-radius: 15px
 				.page__content-item--box
+					max-width: 625px
+					width: 100%
 					.page__content-item--title
 						margin-bottom: 35px
+						&.small
+							h3
+								font-size: 24px
 						h3
 							font-size: 34px
 							font-weight: 700
@@ -2094,11 +2233,13 @@ footer
 				.page__content-item--box
 					margin-right: 35px
 			.page__box
+				padding: 25px 0 50px
 				display: flex
-				margin-bottom: 55px
+				align-items: center
+				flex-wrap: wrap
+				justify-content: space-between
 				.page__box-content
-					margin-right: 35px
-					display: flex
+					max-width: 625px
 					width: 100%
 					flex-direction: column
 					&:last-child
@@ -2112,11 +2253,12 @@ footer
 						p
 							line-height: 1.8
 				.page__box-img
-					border-radius: 10px
+					max-width: 510px
 					width: 100%
 					img
-						width: 515px
-						object-fit: contain
+						display: block
+						width: 100%
+						border-radius: 15px
 			.slider__items
 				border-radius: 7px
 				box-shadow: $shadow-form
@@ -2196,22 +2338,25 @@ footer
 						color: $color-text
 						p
 							line-height: 1.8
+						img
+							display: block
+							width: 100%
+							border-radius: 15px
 			.proposition__main
-				display: flex
-				justify-content: center
 				.proposition__items
 					display: flex
 					flex-direction: row
 					flex-wrap: wrap
-					justify-content: center
 					margin-top: 30px
 					.proposition__items-item
 						position: relative
-						margin-right: 10px
-						margin-bottom: 10px
-						border-radius: 20px
+						width: 32.3%
+						margin: .5%
 						overflow: hidden
-						width: 380px
+						img
+							display: block
+							width: 100%
+							border-radius: 17px
 						.proposition__items-item--text
 							position: absolute
 							top: 0
@@ -2226,12 +2371,19 @@ footer
 							background-color: $bg-section
 							opacity: 0.8
 							transition: $trans
+							border-radius: 17px
 							p
 								line-height: 1.8
 						.proposition__items-item--link
+							display: flex
+							flex-direction: column
+							justify-content: flex-end
 							position: absolute
-							left: 40px
-							bottom: 30px
+							left: 0
+							bottom: 0
+							right: 0
+							top: 0
+							padding: 35px
 							color: $white
 							font-size: 20px
 							font-weight: 800
@@ -2262,6 +2414,9 @@ footer
 	position: relative
 	background-color: $bg-section
 	padding: 50px 0 80px 0
+	overflow: hidden
+	.section__wrapp .title__wrapp .title__wrapp-title .section__title h2
+		font-size: 36px
 	.section__wrapp
 		max-width: 1640px
 		width: 100%
@@ -2297,7 +2452,7 @@ footer
 							color: $white
 						span
 			.page__subslider
-				width: 125%
+				width: 155%
 				margin: 80px 0 0 0
 				.page__subslider-item
 					margin-right: 25px
@@ -2401,22 +2556,23 @@ footer
 	overflow: hidden
 	background-color: $bg-section
 	margin: 55px 0
+	padding: 55px 0
 	.section__wrapp
+		max-width: 1740px
+		width: 100%
+		margin: 0 auto
 		flex-direction: column
-		padding: 0 5%
 		.title__wrapp
-			padding: 0
-			align-items: flex-start
+			padding: 0 0 0 70px
 		.type__main
 			margin-bottom: 55px
 			.type__items
 				display: flex
 				flex-wrap: wrap
-				justify-content: center
 				margin-top: 30px
 				.type__items-item
-					margin-right: 15px
-					margin-top: 15px
+					width: 19%
+					margin: 1% 0.5%
 					opacity: 0.5
 					transition: $trans
 					text-align: center
@@ -2427,10 +2583,11 @@ footer
 						text-transform: uppercase
 						display: flex
 						flex-direction: column
-						width: 300px
+						width: 100%
 						img
-							border-radius: 7px
-							object-fit: contain
+							border-radius: 17px
+							display: block
+							width: 100%
 						span
 							&:before
 								content: "—"
@@ -3012,136 +3169,7 @@ footer
 
 // Finish Section Pagination //
 
-// Start Section Modal //
 
-#modal_cena
-	box-shadow: $shadow-form
-	border-radius: 7px
-	justify-content: center
-	padding: 40px 100px
-	z-index: 2
-	.modal_cena
-		display: flex
-		flex-direction: column
-		align-items: center
-		max-width: 315px
-		h3
-			font-weight: 700
-			font-size: 32px
-		p
-			margin-top: 5px
-			font-size: 19px
-			margin-bottom: 40px
-		.modal_cena__form-input 
-			border-radius: 45px
-			border: 2px solid $form-input
-			background-color: transparent
-			padding: 10px 30px
-			margin-top: 10px
-			width: 100%
-			color: $black
-			&:placeholder
-				color: $white
-				font-size: 14px
-		.modal_cena__form-btn
-			display: flex
-			align-items: center
-			justify-content: center
-			border-radius: 45px
-			padding: 15px
-			width: 80%
-			margin-top: 40px
-			margin-bottom: 10px
-			font-weight: 700
-		.modal_cena__form-label
-			margin-top: 10px
-			width: 80%
-			text-align: center
-			font-size: 12px
-
-#review__add
-	box-shadow: $shadow-form
-	border-radius: 7px
-	justify-content: center
-	padding: 40px 100px
-	z-index: 2
-	.review__add
-		display: flex
-		flex-direction: column
-		align-items: center
-		max-width: 315px
-		h3
-			font-weight: 700
-			font-size: 32px
-		p
-			margin-top: 5px
-			font-size: 19px
-			margin-bottom: 40px
-		.review__add__form-input 
-			border-radius: 45px
-			border: 2px solid $form-input
-			background-color: transparent
-			padding: 10px 30px
-			margin-top: 10px
-			margin-bottom: 30px
-			width: 100%
-			color: $black
-			&:placeholder
-				color: $white
-				font-size: 14px
-		.review__add__form-textarea
-			border-radius: 9px
-			border: 2px solid $form-input
-			background-color: transparent
-			padding: 10px 30px
-			margin-top: 20px
-			margin-bottom: 10px
-			width: 100%
-			color: $black
-			resize: none
-			&:placeholder
-				color: $white
-				font-size: 14px
-		.review__add__form-btn
-			display: flex
-			align-items: center
-			justify-content: center
-			border-radius: 45px
-			padding: 15px
-			width: 80%
-			margin-top: 40px
-			margin-bottom: 10px
-			font-weight: 700
-		.review__add__form-label
-			margin-top: 10px
-			width: 80%
-			text-align: center
-			font-size: 12px
-
-#type__items-item--link
-	box-shadow: $shadow-form
-	border-radius: 7px
-	padding: 0
-	margin: 0
-	z-index: 2
-	.modal-type__items-item--link
-		display: flex
-		.modal-type__items-item--link_img
-		.modal-type__items-item--link_content
-			display: flex
-			flex-direction: column
-			padding: 0 65px
-			justify-content: center
-			width: 430px
-			h3
-				font-size: 24px
-				font-weight: 700
-				margin-bottom: 35px
-			p
-				font-size: 18px
-				line-height: 1.8
-
-// Finish Section Modal//
 .page__title
 	margin: 50px auto
 	width: 100%
@@ -3276,3 +3304,117 @@ footer
 		& *
 			pointer-events: none
 
+
+.popup
+	background: #FFFFFF
+	box-shadow: 0px 4px 25px #C9CACB
+	border-radius: 7px
+	padding: 40px
+	max-width: 510px
+	width: 100%
+	display: flex
+	flex-direction: column
+	align-items: center
+	margin: 50px auto
+	position: relative
+	&.big
+		max-width: 900px
+		width: 100%
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		padding: 0
+		margin: 50px auto
+		overflow: hidden
+		border-radius: 20px
+	.big-left
+		width: 40%
+		img
+			display: block
+			height: 100%
+			max-width: 100%
+			object-fit: cover
+	.big-right
+		width: 60%
+		padding: 40px
+	&__title
+		text-align: center
+		font-weight: 700
+		font-size: 32px
+	&__subtitle
+		margin: 0 0 40px 0
+		font-size: 19px
+		font-weight: 400
+		text-align: center
+	&__text
+		font-size: 12px
+		line-height: 15px
+		text-align: center
+		color: #7A88A3
+		margin: 16px 0 0 0
+	&-form
+		width: 316px
+		&__title
+			color: #7C7E86
+			font-weight: 600
+			margin: 20px 0 12px 0
+			font-size: 14px
+		textarea
+			border-radius: 15px
+			height: 115px
+			padding: 25px
+		&__input
+			display: block
+			width: 100%
+			border: 2px solid #D3D3D3
+			border-radius: 45px
+			height: 45px
+			padding: 0 25px
+			font-size: 14px
+			color: #7C7E86
+			margin: 0 0 12px 0
+			&::placeholder
+				font-size: 14px
+				color: #7C7E86
+		&__btn
+			position: relative
+			width: 260px
+			height: 53px
+			display: flex
+			align-items: center
+			justify-content: center
+			text-align: center
+			margin: 30px auto 0 auto
+			font-size: 16px
+			color: #2A2D43
+			font-weight: 700
+			border-radius: 45px
+			background: linear-gradient(268.74deg, #83EC67 3.62%, #48D08F 96.19%)
+			cursor: pointer
+			span
+				position: relative
+				z-index: 1
+			&:hover
+				&:before
+					top: 0
+			&:before
+				content: ""
+				position: absolute
+				border-radius: 45px
+				top: 5px
+				left: 0
+				transition: all .3s ease
+				height: 100%
+				width: 100%
+				background: $gradient-btn
+				z-index: -1
+	
+
+.text-container
+	h3
+		font-weight: 700
+		font-size: 24px
+	p
+		font-size: 18px
+		line-height: 1.6
+		margin: 30px 0 0 0

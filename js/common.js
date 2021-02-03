@@ -87,6 +87,28 @@
 			$('.system .progress-line circle').css('stroke-dashoffset', currProgress - progressPart);
 		});
 
+		$('.system-type2 .slider').slick({
+			dots: false,
+			arrows: true,
+			infinite: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			prevArrow: $('.system-type2 .arrow_prev'),
+			nextArrow: $('.system-type2 .arrow_next')
+		});
+
+		var systemSlideCount1 = $('.system-type2 .slider').slick("getSlick").slideCount;
+		var progressPart1 = -330 / systemSlideCount1;
+		$('.system-type2 .progress-line circle').css('stroke-dashoffset', -330 - progressPart1); // начальное положение
+		$('.system-type2 .arrow_prev').on('click', function() {
+			var currProgress1 = parseInt($('.system-type2 .progress-line circle').css('stroke-dashoffset').replace('px', ''));
+			$('.system-type2 .progress-line circle').css('stroke-dashoffset', currProgress1 + progressPart1);
+		});
+		$('.system-type2 .arrow_next').on('click', function() {
+			var currProgress1 = parseInt($('.system-type2 .progress-line circle').css('stroke-dashoffset').replace('px', ''));
+			$('.system-type2 .progress-line circle').css('stroke-dashoffset', currProgress1 - progressPart1);
+		});
+
 		// Productions Slider
 		$('.product__slider').slick({
 			slidesToShow: 1,
@@ -295,12 +317,20 @@
 		$('.slider-count').find($('.slider-count__all').text(PrependZeros(slick.slideCount, 2)));
 	});
 
+	$('.system-type2 .slider').on('afterChange', function (event, slick, nextSlide) {
+		$('.system-type2 .counter__curr').text(PrependZeros(nextSlide + 1, 2));
+	});
+	$('.system-type2 .slider').on('init', function (event, slick) {
+		$('.system-type2 .counter__all').text(PrependZeros(slick.slideCount, 2));
+	});
+
 	$('.system .slider').on('afterChange', function (event, slick, nextSlide) {
 		$('.system .counter__curr').text(PrependZeros(nextSlide + 1, 2));
 	});
 	$('.system .slider').on('init', function (event, slick) {
 		$('.system .counter__all').text(PrependZeros(slick.slideCount, 2));
 	});
+
 
 	$('.product__slider').on('init', function (event, slick) {
 		$('.product_slider-count').find($('.slider-count__all2').text(PrependZeros(slick.slideCount, 2)));
