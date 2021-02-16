@@ -16,7 +16,7 @@
 		}
 
 		$('input[type="tel"]').inputmask({
-			mask: "+7 (999) 999-99-99",
+			mask: "+3 (999) 999-99-99",
 			greedy: false
 		});
 
@@ -50,8 +50,9 @@
 			infinite: true,
 			speed: 900,
 			autoplay: true,
-			wirableWidth: true,
 			autoplaySpeed: 5000,
+			fade: true,
+			cssEase: 'linear',
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			prevArrow: $('#header .btn_prev'),
@@ -152,10 +153,10 @@
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			arrows: false,
-			wirableWidth: true,
 			asNavFor: '.review-all__slider'
 		});
 		$('.review-all__slider').slick({
+			infinite: false,
 			slidesToShow: 4,
 			slidesToScroll: 1,
 			asNavFor: '.review-second__slider',
