@@ -33,7 +33,7 @@
 	<header id="header" class="type3">
 		<div class="header__top">
 			<a href="index.html" class="logo">
-				<img src="img/logo.png" alt="logo" class="logo__img">
+				<img src="img/logo2.svg" alt="logo" class="logo__img">
 			</a>
 			<div class="adress">
 				<div class="adress__loc">
@@ -51,17 +51,18 @@
 					<li><a href="#">UA</a></li>
 					<li><a href="#">RUS</a></li>
 					<li><a href="#">EN</a></li>
+					<li><a href="#">EN</a></li>
 				</ul>
 			</div>
 			<div class="header__menu">
 				<ul class="header__menu-top">
-					<li><a href="" class="header__menu-top--link">Главная</a></li>
-					<li><a href="" class="header__menu-top--link">О нас</a></li>
-					<li><a href="" class="header__menu-top--link">Каталог</a></li>
-					<li><a href="" class="header__menu-top--link">Цены</a></li>
-					<li><a href="" class="header__menu-top--link">Отзывы</a></li>
-					<li><a href="" class="header__menu-top--link">Блог</a></li>
-					<li><a href="" class="header__menu-top--link">Контакты</a></li>
+					<li><a href="index.html" class="header__menu-top--link">Главная</a></li>
+					<li><a href="about.html" class="header__menu-top--link">О нас</a></li>
+					<li><a href="#" class="header__menu-top--link">Каталог</a></li>
+					<li><a href="cena.html" class="header__menu-top--link">Цены</a></li>
+					<li><a href="review.html" class="header__menu-top--link">Отзывы</a></li>
+					<li><a href="blog.html" class="header__menu-top--link">Блог</a></li>
+					<li><a href="contact.html" class="header__menu-top--link">Контакты</a></li>
 				</ul>
 				<button class="burger">
 					<span class="bar bar1"></span>
@@ -70,18 +71,14 @@
 				</button>
 			</div>
 			<div class="call_back">
-				<div class="phone_numb">
-					<a href="tel:+380676199313">+38 (067) <span>619 93 13</span></a>
-				</div>
-				<a href="#callback" class="call_back-modal popup-link">Заказать звонок</a>
+				<a class="phone_numb" href="tel:+380676199313">+38 (067) <span> 619 93 13</span></a>
+				<a href="#modal_cena" class="call_back-modal popup-link">Заказать звонок</a>
 			</div>
 		</div>
 		<div class="header__main">
 			<div class="section__wrapp">
 				<div class="header__main-left">
-					<div class="header__main-title">
-						<h1>Изготовление световых вывесок ”под ключ”</h1>
-					</div>
+					<h1 class="header__main-title">Изготовление <br> световых вывесок <br> ”под ключ”</h1>
 					<div class="header__main-content">
 						<div class="header__main-content--item">
 							<img src="img/icon_1.svg" alt="">
@@ -99,15 +96,14 @@
 							<p>Большое портфолио выполненных работ</p>
 						</div>
 					</div>
-					<div class="header__main-down">
-						<a href="#modal_cena" class="header__btn popup-link">Рассчитать стоимость за 9 мин</a>
-					</div>
+					<a class="header__btn popup-link" href="#modal_cena">Рассчитать стоимость за 9 мин</a>
 					<div class="header__noties">
 						<img src="img/sub_logo.png" alt="">
 						<p>Участники Украинской ассоциации Визуальной Индустрии</p>
 					</div>
 				</div>
 				<div class="header__main-right">
+					<div class="header__slider-title">Торговые сети</div>
 					<div class="slider-wrap">
 						<div class="header__slider">
 							<div class="header__slider-item">
@@ -120,10 +116,45 @@
 									<img src="img/slider_item-img_1.jpg" alt="">
 								</div>
 							</div>
+							<div class="header__slider-item">
+								<div class="header__slider-item--img">
+									<img src="img/slider_item-img_1.jpg" alt="">
+								</div>
+							</div>
+							<!-- <div class="header__slider-item">
+								<div class="header__slider-item--img">
+									<img src="img/slider_item-img_1.jpg" alt="">
+								</div>
+								<div class="header__slider-item--title">
+									<img src="img/slider_item-title.png" alt="">
+								</div>
+							</div>
+							<div class="header__slider-item">
+								<div class="header__slider-item--img">
+									<img src="img/slider_item-img_1.jpg" alt="">
+								</div>
+								<div class="header__slider-item--title">
+									<img src="img/slider_item-title.png" alt="">
+								</div>
+							</div>
+							<div class="header__slider-item">
+								<div class="header__slider-item--img">
+									<img src="img/slider_item-img_1.jpg" alt="">
+								</div>
+								<div class="header__slider-item--title">
+									<img src="img/slider_item-title.png" alt="">
+								</div>
+							</div>
+							<div class="header__slider-item">
+								<div class="header__slider-item--img">
+									<img src="img/slider_item-img_1.jpg" alt="">
+								</div>
+								<div class="header__slider-item--title">
+									<img src="img/slider_item-title.png" alt="">
+								</div>
+							</div> -->
 						</div>
-						<div class="header__main-more">
-							<a href="#page-slider" class="header__main-btn anchor">Посмотреть все работы</a>
-						</div>
+						<a href="#work" class="header__main-btn anchor">Посмотреть все работы</a>
 					</div>
 					<div class="arrows">
 						<div class="btn_slick btn_prev"></div>
@@ -138,609 +169,583 @@
 		</div>
 	</header>
 
-		<section id="privilege">
-			<div class="section__wrapp">
-				<div class="privilege__items">
-					<div class="privilege__items-item">
-						<div class="privilege__items-item--icon">
-							<img src="img/cardiogram.svg" alt="">
-						</div>
-						<div class="privilege__items-item--text">
-							<p>Современное <br> оборудование</p>
-						</div>
+	<section id="privilege">
+		<div class="section__wrapp">
+			<div class="privilege__items">
+				<div class="privilege__items-item">
+					<div class="privilege__items-item--icon">
+						<img src="img/cardiogram.svg" alt="">
 					</div>
-					<div class="privilege__items-item">
-						<div class="privilege__items-item--icon">
-							<img src="img/buildings.svg" alt="">
-						</div>
-						<div class="privilege__items-item--text">
-							<p>Собственная <br> производственная база</p>
-							<p class="privilege__items-item--descripton">550 м2</p>
-						</div>
+					<div class="privilege__items-item--text">
+						<p>Современное <br> оборудование</p>
 					</div>
-					<div class="privilege__items-item">
-						<div class="privilege__items-item--icon">
-							<img src="img/tag.svg" alt="">
-						</div>
-						<div class="privilege__items-item--text">
-							<p>Работаем без посредников</p>
-							<p class="privilege__items-item--descripton">стоимость услуг без наценкок и <br> доп.комиссий</p>
-						</div>
+				</div>
+				<div class="privilege__items-item">
+					<div class="privilege__items-item--icon">
+						<img src="img/buildings.svg" alt="">
+					</div>
+					<div class="privilege__items-item--text">
+						<p>Собственная <br> производственная база</p>
+						<p class="privilege__items-item--descripton">550 м2</p>
+					</div>
+				</div>
+				<div class="privilege__items-item">
+					<div class="privilege__items-item--icon">
+						<img src="img/tag.svg" alt="">
+					</div>
+					<div class="privilege__items-item--text">
+						<p>Работаем без посредников</p>
+						<p class="privilege__items-item--descripton">стоимость услуг без наценкок и <br> доп.комиссий</p>
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<section id="page">
-			<div class="section__wrapp">
-				<div class="page__content">
-					<div class="page__box">
-						<div class="page__box-content">
-							<div class="page__box-content--title">
-								<h3>Лайтбокс</h3>
-							</div>
-							<div class="page__box-content--text">
-								<p>Используют для рекламирования заведения, информируют потенциальных пользователей/покупателей, считаются эффективным методом навигации. Лайтбоксы не редкость в торговых центрах, часто используются в качестве фасадной наружной рекламы, хорошо смотрятся в качестве интерьерного решения. Их можно изготовить любой формы и размера - ограничений нет.</p>
-							</div>
+	<section id="page">
+		<div class="section__wrapp">
+			<div class="page__content">
+				<div class="page__box">
+					<div class="page__box-content">
+						<div class="page__box-content--title">
+							<h3>Лайтбокс</h3>
 						</div>
-						<div class="page__box-img">
-							<img src="img/page__box-img-1.jpg" alt="">
-						</div>
-					</div>
-					<section class="system-type2">
-						<div class="system-type2-container">
-							<div class="slider">
-								<div class="slide">
-									<img src="img/system-img.jpg" alt="" class="slide__img">
-									<div class="slide-inner">
-										<div class="slide__title">Какие бывают виды лайтбоксов?</div>
-										<div class="slide__text">Форма имеет значение?</div>
-										<div class="slide-text">
-											<div class="slide__subtitle">Опытная команда</div>
-											<div class="slide__text">Главный специалист из отдела монтажной бригады контроллирует соблюдение всех
-												технологий и норм во время монтажных работ. Работу выполняют только те специалисты, у которых опыт
-												работы составляет <strong>более 10 лет</strong>, а также у кого имеется <strong>официальный
-													доступ</strong> к высотным работам.</div>
-										</div>
-									</div>
-								</div>
-								<div class="slide">
-									<img src="img/system-img.jpg" alt="" class="slide__img">
-									<div class="slide-inner">
-										<div class="slide__title">Какие бывают виды лайтбоксов?</div>
-										<div class="slide__text">Форма имеет значение?</div>
-										<div class="slide-text">
-											<div class="slide__subtitle">Опытная команда</div>
-											<div class="slide__text">Главный специалист из отдела монтажной бригады контроллирует соблюдение всех
-												технологий и норм во время монтажных работ. Работу выполняют только те специалисты, у которых опыт
-												работы составляет <strong>более 10 лет</strong>, а также у кого имеется <strong>официальный
-													доступ</strong> к высотным работам.</div>
-										</div>
-									</div>
-								</div>
-								<div class="slide">
-									<img src="img/system-img.jpg" alt="" class="slide__img">
-									<div class="slide-inner">
-										<div class="slide__title">Какие бывают виды лайтбоксов?</div>
-										<div class="slide__text">Форма имеет значение?</div>
-										<div class="slide-text">
-											<div class="slide__subtitle">Опытная команда</div>
-											<div class="slide__text">Главный специалист из отдела монтажной бригады контроллирует соблюдение всех
-												технологий и норм во время монтажных работ. Работу выполняют только те специалисты, у которых опыт
-												работы составляет <strong>более 10 лет</strong>, а также у кого имеется <strong>официальный
-													доступ</strong> к высотным работам.</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="controls">
-								<div class="progress">
-									<svg class="progress-line" fill="none">
-										<circle cx="58.5" cy="58.5" r="54" stroke-width="11" stroke-linecap="round" style="stroke-dashoffset: -330"/>
-									</svg>
-									<div class="counter">
-										<div class="counter__curr">01</div>
-										<div class="counter__all"></div>
-									</div>
-								</div>
-								<div class="arrows">
-									<div class="arrow arrow_prev"></div>
-									<div class="arrow arrow_next"></div>
-								</div>
-							</div>
-						</div>
-					</section>
-					<div class="title__wrapp">
-						<div class="title__wrapp-title">
-							<div class="section__title">
-								<h2>Виды лайтбоксов по количеству панелей</h2>
-							</div>
-							<div class="section__text">
-								<p>Мы предлагаем 2 материала изготовления: из молочного акрила или сотового поликарбоната. Второй вариант обойдется дешевле. На пластике размещается самоклеящаяся пленка с выбранным изображением. Борты изготавливаются из ПВХ или композитных алюминиевых панелей, а задняя стенка - из композита или оцинковки (используется только для односторонних лайтбоксов). Подсветка изделия организована светодиодной лентой.</p>
-							</div>
+						<div class="page__box-content--text">
+							<p>Используют для рекламирования заведения, информируют потенциальных пользователей/покупателей, считаются
+								эффективным методом навигации. Лайтбоксы не редкость в торговых центрах, часто используются в качестве
+								фасадной наружной рекламы, хорошо смотрятся в качестве интерьерного решения. Их можно изготовить любой
+								формы и размера - ограничений нет.</p>
 						</div>
 					</div>
-					<div class="page__content-item">
-						<div class="page__content-item--photo">
-							<img src="img/Ламінатор 6.jpg" alt="">
-						</div>
-						<div class="page__content-item--photo">
-							<img src="img/Ламінатор 4.jpg" alt="">
-						</div>
-					</div>
-					<div class="page__box">
-						<div class="page__box-content">
-							<div class="page__box-content--title">
-								<h3>Двусторонние</h3>
-							</div>
-							<div class="page__box-content--text">
-								<p>Двусторонние – позволяют задействовать сразу две стороны для размещения изображения. Крепятся при помощи кронштейнов. Используются в тех случаях, когда возможности крепления к стене или фасаду нет. Также отличный вариант для торцевой рекламы.</p>
-							</div>
-						</div>
-						<div class="page__box-content">
-							<div class="page__box-content--title">
-								<h3>Односторонние</h3>
-							</div>
-							<div class="page__box-content--text">
-								<p>Односторонние – фасадные вывески, на которых информация находится с одной стороны, а задняя панель используется для крепления к стене.</p>
-							</div>
-						</div>
+					<div class="page__box-img">
+						<img src="img/page__box-img-1.jpg" alt="">
 					</div>
 				</div>
-			</div>
-		</section>
-		<section id="page-slider">
-			<div class="section__wrapp">
-				<div class="page__slider">
-					<div class="page__slider-item">
-						<div class="page__slider-item--img">
-							<img src="img/page_slider-item-1.jpg" alt="">
-						</div>
-					</div>
-					<div class="page__slider-item">
-						<div class="page__slider-item--img">
-							<img src="img/page_slider-item-1.jpg" alt="">
-						</div>
-					</div>
-					<div class="page__slider-item">
-						<div class="page__slider-item--img">
-							<img src="img/page_slider-item-1.jpg" alt="">
-						</div>
-					</div>
-					<div class="page__slider-item">
-						<div class="page__slider-item--img">
-							<img src="img/page_slider-item-1.jpg" alt="">
-						</div>
-					</div>
-					<div class="page__slider-item">
-						<div class="page__slider-item--img">
-							<img src="img/page_slider-item-1.jpg" alt="">
-						</div>
-					</div>
-					<div class="page__slider-item">
-						<div class="page__slider-item--img">
-							<img src="img/page_slider-item-1.jpg" alt="">
-						</div>
-					</div>
-					<div class="page__slider-item">
-						<div class="page__slider-item--img">
-							<img src="img/page_slider-item-1.jpg" alt="">
-						</div>
-					</div>
-					<div class="page__slider-item">
-						<div class="page__slider-item--img">
-							<img src="img/page_slider-item-1.jpg" alt="">
-						</div>
-					</div>
-				</div>
-				<div class="slider__items-item--box">
-					<div class="title__wrapp">
-						<div class="title__wrapp-title">
-							<div class="section__title">
-								<h2>Примеры выполненных работ</h2>
+				<section class="system-type2">
+					<div class="system-type2-container">
+						<div class="slider">
+							<div class="slide">
+								<img src="img/system-img.jpg" alt="" class="slide__img">
+								<div class="slide-inner">
+									<div class="slide__title">Какие бывают виды лайтбоксов?</div>
+									<div class="slide__text">Форма имеет значение?</div>
+									<div class="slide-text">
+										<div class="slide__subtitle">Опытная команда</div>
+										<div class="slide__text">Главный специалист из отдела монтажной бригады контроллирует соблюдение
+											всех
+											технологий и норм во время монтажных работ. Работу выполняют только те специалисты, у которых опыт
+											работы составляет <strong>более 10 лет</strong>, а также у кого имеется <strong>официальный
+												доступ</strong> к высотным работам.</div>
+									</div>
+								</div>
 							</div>
-							<div class="section__text">
-								<h3>Реализовали <span>более 15 000</span> вывесок <span>в 30 сферах</span> бизнесса</h3>
+							<div class="slide">
+								<img src="img/system-img.jpg" alt="" class="slide__img">
+								<div class="slide-inner">
+									<div class="slide__title">Какие бывают виды лайтбоксов?</div>
+									<div class="slide__text">Форма имеет значение?</div>
+									<div class="slide-text">
+										<div class="slide__subtitle">Опытная команда</div>
+										<div class="slide__text">Главный специалист из отдела монтажной бригады контроллирует соблюдение
+											всех
+											технологий и норм во время монтажных работ. Работу выполняют только те специалисты, у которых опыт
+											работы составляет <strong>более 10 лет</strong>, а также у кого имеется <strong>официальный
+												доступ</strong> к высотным работам.</div>
+									</div>
+								</div>
+							</div>
+							<div class="slide">
+								<img src="img/system-img.jpg" alt="" class="slide__img">
+								<div class="slide-inner">
+									<div class="slide__title">Какие бывают виды лайтбоксов?</div>
+									<div class="slide__text">Форма имеет значение?</div>
+									<div class="slide-text">
+										<div class="slide__subtitle">Опытная команда</div>
+										<div class="slide__text">Главный специалист из отдела монтажной бригады контроллирует соблюдение
+											всех
+											технологий и норм во время монтажных работ. Работу выполняют только те специалисты, у которых опыт
+											работы составляет <strong>более 10 лет</strong>, а также у кого имеется <strong>официальный
+												доступ</strong> к высотным работам.</div>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="arrows">
-							<div class="btn_slick btn_prev"></div>
-							<div class="btn_slick btn_next"></div>
+						<div class="controls">
+							<div class="progress">
+								<svg class="progress-line" fill="none">
+									<circle cx="58.5" cy="58.5" r="54" stroke-width="11" stroke-linecap="round"
+										style="stroke-dashoffset: -330" />
+								</svg>
+								<div class="counter">
+									<div class="counter__curr">01</div>
+									<div class="counter__all"></div>
+								</div>
+							</div>
+							<div class="arrows">
+								<div class="arrow arrow_prev"></div>
+								<div class="arrow arrow_next"></div>
+							</div>
 						</div>
 					</div>
-					<div class="page__subslider">
-						<div class="page__subslider-item">
-							<img src="img/page_subslider-item-1.jpg" alt="">
-						</div>
-						<div class="page__subslider-item">
-							<img src="img/page_subslider-item-1.jpg" alt="">
-						</div>
-						<div class="page__subslider-item">
-							<img src="img/page_subslider-item-1.jpg" alt="">
-						</div>
-						<div class="page__subslider-item">
-							<img src="img/page_subslider-item-1.jpg" alt="">
-						</div>
-						<div class="page__subslider-item">
-							<img src="img/page_subslider-item-1.jpg" alt="">
-						</div>
-						<div class="page__subslider-item">
-							<img src="img/page_subslider-item-1.jpg" alt="">
-						</div>
-						<div class="page__subslider-item">
-							<img src="img/page_subslider-item-1.jpg" alt="">
-						</div>
-						<div class="page__subslider-item">
-							<img src="img/page_subslider-item-1.jpg" alt="">
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section id="service">
-			<div class="section__wrapp">
+				</section>
 				<div class="title__wrapp">
 					<div class="title__wrapp-title">
-						<div class="section__title">
-							<h2>ВЫВЕСКА ПРОСЛУЖИТ БОЛЕЕ 10 ЛЕТ</h2>
-						</div>
-						<div class="section__description">
-							<h3></h3>
-						</div>
+						<div class="section__title">Виды лайтбоксов по количеству панелей</div>
 						<div class="section__text">
-							<p>В производстве используем только качественные <br> материалы и комплектующие европейского <br>качества!
+							<p>Мы предлагаем 2 материала изготовления: из молочного акрила или сотового поликарбоната. Второй вариант
+								обойдется дешевле. На пластике размещается самоклеящаяся пленка с выбранным изображением. Борты
+								изготавливаются из ПВХ или композитных алюминиевых панелей, а задняя стенка - из композита или оцинковки
+								(используется только для односторонних лайтбоксов). Подсветка изделия организована светодиодной лентой.
 							</p>
 						</div>
 					</div>
 				</div>
-				<div class="service__content">
-					<div class="service__items">
-						<a data-img="1" class="service__items-item item-1">
-							<span></span>
-						</a>
-						<a data-img="2" class="service__items-item item-2">
-							<span></span>
-						</a>
-						<a data-img="3" class="service__items-item item-3">
-							<span></span>
-						</a>
-						<a data-img="4" class="service__items-item item-4">
-							<span></span>
-						</a>
-						<a data-img="5" class="service__items-item item-5">
-							<span></span>
-						</a>
-						<div data-img="1" class="service__items-item--box box-1">
-							<p class="title">Светодиодные линзованные модули ARB</p>
-							<p>«2835» с гарантией 3 года равномерно рассеивают свет и потребляют электричества как одна обычная лампочка
-								мощностью 100 Вт.</p>
+				<div class="page__content-item">
+					<div class="page__content-item--photo">
+						<img src="img/Ламінатор 6.jpg" alt="">
+					</div>
+					<div class="page__content-item--photo">
+						<img src="img/Ламінатор 4.jpg" alt="">
+					</div>
+				</div>
+				<div class="page__box">
+					<div class="page__box-content">
+						<div class="page__box-content--title">
+							<h3>Двусторонние</h3>
 						</div>
-						<div data-img="2" class="service__items-item--box box-2">
-							<p class="title">Светодиодные линзованные модули ARB</p>
-							<p>«2835» с гарантией 3 года равномерно рассеивают свет и потребляют электричества как одна обычная лампочка
-								мощностью 100 Вт.</p>
+						<div class="page__box-content--text">
+							<p>Двусторонние – позволяют задействовать сразу две стороны для размещения изображения. Крепятся при
+								помощи кронштейнов. Используются в тех случаях, когда возможности крепления к стене или фасаду нет.
+								Также отличный вариант для торцевой рекламы.</p>
 						</div>
-						<div data-img="3" class="service__items-item--box box-3">
-							<p class="title">Светодиодные линзованные модули ARB</p>
-							<p>«2835» с гарантией 3 года равномерно рассеивают свет и потребляют электричества как одна обычная лампочка
-								мощностью 100 Вт.</p>
+					</div>
+					<div class="page__box-content">
+						<div class="page__box-content--title">
+							<h3>Односторонние</h3>
 						</div>
-						<div data-img="4" class="service__items-item--box box-4">
-							<p class="title">Светодиодные линзованные модули ARB</p>
-							<p>«2835» с гарантией 3 года равномерно рассеивают свет и потребляют электричества как одна обычная лампочка
-								мощностью 100 Вт.</p>
-						</div>
-						<div data-img="5" class="service__items-item--box box-5">
-							<p class="title">Светодиодные линзованные модули ARB</p>
-							<p>«2835» с гарантией 3 года равномерно рассеивают свет и потребляют электричества как одна обычная лампочка
-								мощностью 100 Вт.</p>
+						<div class="page__box-content--text">
+							<p>Односторонние – фасадные вывески, на которых информация находится с одной стороны, а задняя панель
+								используется для крепления к стене.</p>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
-		
-		<section id="preview">
-			<div class="section__wrapp">
-				<div class="preview__left">
+		</div>
+	</section>
+	<section id="page-slider">
+		<div class="section__wrapp">
+			<div class="page__slider">
+				<div class="page__slider-item">
+					<div class="page__slider-item--img">
+						<img src="img/page_slider-item-1.jpg" alt="">
+					</div>
 				</div>
-				<div class="perview__right">
-					<div class="title__wrapp">
-						<div class="title__wrapp-title">
-							<div class="section__title">
-								<h2>Как будет выглядеть <span>Ваша вывеска?</span></h2>
-							</div>
-							<div class="section__text">
-								<p>Получите индивидуальный дизайн проект прямо сейчас!</p>
-							</div>
-						</div>
+				<div class="page__slider-item">
+					<div class="page__slider-item--img">
+						<img src="img/page_slider-item-1.jpg" alt="">
 					</div>
-					<div class="preview__box">
-						<div class="preview__box-title">
-							<p>Дизайн-проект включает в себя:</p>
-						</div>
-						<div class="preview__box-cont">
-							<ul>
-								<li>Разработку макета вывески, с учетом стиля, цвета и других пожеланий заказчика.</li>
-								<li>Визуализацию фасадной вывески.</li>
-								<li>Визуализацию вывески формата день/ночь.</li>
-								<li>Проработку технических решений.</li>
-							</ul>
-							<div class="preview__box-cont--items">
-								<div class="preview__box-cont--item">
-									<span><img src="img/chronometer_white.svg" alt=""></span>
-									<div class="preview__box-cont--item_text">
-										<p class="preview__box-cont--item_title">Какие сроки?</p>
-										<p>Сроки изготовления составляют до 1 рабочего дня </p>
-									</div>
-								</div>
-								<div class="preview__box-cont--item">
-									<span><img src="img/payment.svg" alt=""></span>
-									<div class="preview__box-cont--item_text">
-										<p class="preview__box-cont--item_title">Стоимость — бесплатно</p>
-										<p>В случае дальнейшего заказа изготовления световой вывески от 10 000 грн</p>
-									</div>
-								</div>
-							</div>
-						</div>
+				</div>
+				<div class="page__slider-item">
+					<div class="page__slider-item--img">
+						<img src="img/page_slider-item-1.jpg" alt="">
 					</div>
-					<div class="preview__down">
-						<div class="preview__form-title">
-							<p>Оставьте свои контактные данные и специалист свяжется с вами <span>в течение 7 минут</span></p>
-						</div>
-						<form action="" class="preview__form">
-							<input type="text" class="preview__form-input" placeholder="Введите телефон">
-							<button class="btn preview__form-btn">Получить сейчас</button>
-						</form>
+				</div>
+				<div class="page__slider-item">
+					<div class="page__slider-item--img">
+						<img src="img/page_slider-item-1.jpg" alt="">
+					</div>
+				</div>
+				<div class="page__slider-item">
+					<div class="page__slider-item--img">
+						<img src="img/page_slider-item-1.jpg" alt="">
+					</div>
+				</div>
+				<div class="page__slider-item">
+					<div class="page__slider-item--img">
+						<img src="img/page_slider-item-1.jpg" alt="">
+					</div>
+				</div>
+				<div class="page__slider-item">
+					<div class="page__slider-item--img">
+						<img src="img/page_slider-item-1.jpg" alt="">
+					</div>
+				</div>
+				<div class="page__slider-item">
+					<div class="page__slider-item--img">
+						<img src="img/page_slider-item-1.jpg" alt="">
 					</div>
 				</div>
 			</div>
-		</section>
-		<section class="system">
-			<div class="system-container">
-				<div class="slider">
-					<div class="slide">
-						<img src="img/system-img.jpg" alt="" class="slide__img">
-						<div class="slide-inner">
-							<div class="slide__title">Применяем <span>трёх уровневую</span> систему контроля качества</div>
-							<div class="slide-text">
-								<div class="slide__subtitle">Опытная команда</div>
-								<div class="slide__text">Главный специалист из отдела монтажной бригады контроллирует соблюдение всех
-									технологий и норм во время монтажных работ. Работу выполняют только те специалисты, у которых опыт
-									работы составляет <strong>более 10 лет</strong>, а также у кого имеется <strong>официальный
-										доступ</strong> к высотным работам.</div>
-							</div>
-						</div>
-					</div>
-					<div class="slide">
-						<img src="img/system-img.jpg" alt="" class="slide__img">
-						<div class="slide-inner">
-							<div class="slide__title">Применяем <span>трёх уровневую</span> систему контроля качества</div>
-							<div class="slide-text">
-								<div class="slide__subtitle">Опытная команда</div>
-								<div class="slide__text">Главный специалист из отдела монтажной бригады контроллирует соблюдение всех
-									технологий и норм во время монтажных работ. Работу выполняют только те специалисты, у которых опыт
-									работы составляет <strong>более 10 лет</strong>, а также у кого имеется <strong>официальный
-										доступ</strong> к высотным работам.</div>
-							</div>
-						</div>
-					</div>
-					<div class="slide">
-						<img src="img/system-img.jpg" alt="" class="slide__img">
-						<div class="slide-inner">
-							<div class="slide__title">Применяем <span>трёх уровневую</span> систему контроля качества</div>
-							<div class="slide-text">
-								<div class="slide__subtitle">Опытная команда</div>
-								<div class="slide__text">Главный специалист из отдела монтажной бригады контроллирует соблюдение всех
-									технологий и норм во время монтажных работ. Работу выполняют только те специалисты, у которых опыт
-									работы составляет <strong>более 10 лет</strong>, а также у кого имеется <strong>официальный
-										доступ</strong> к высотным работам.</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="controls">
-					<div class="progress">
-						<svg class="progress-line" fill="none">
-							<circle cx="58.5" cy="58.5" r="54" stroke-width="11" stroke-linecap="round" style="stroke-dashoffset: -330"/>
-						</svg>
-						<div class="counter">
-							<div class="counter__curr">01</div>
-							<div class="counter__all"></div>
-						</div>
-					</div>
-					<div class="arrows">
-						<div class="arrow arrow_prev"></div>
-						<div class="arrow arrow_next"></div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section id="work-sheme">
-			<div class="inner">
-				<div class="section__title">
-					<h2>Схема работы</h2>
-				</div>
-				<div class="list">
-					<div class="item">
-						<div class="item__text">Выявляем цели и <br> нужды</div>
-					</div>
-					<div class="item">
-						<div class="item__text">Разрабатываем <br> дизайн с <br> визуализацией</div>
-					</div>
-					<div class="item">
-						<div class="item__text">Делаем просчет <br> вариантов по Вашему <br> бюджету</div>
-					</div>
-					<div class="item">
-						<div class="item__text">Заключаем договор</div>
-					</div>
-					<div class="item">
-						<div class="item__text">Запускаем процесс <br> производства</div>
-					</div>
-					<div class="item">
-						<div class="item__text">Проводим монтажные <br> работы</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section id="proposition">
-			<div class="section__wrapp">
+			<div class="slider__items-item--box">
 				<div class="title__wrapp">
 					<div class="title__wrapp-title">
 						<div class="section__title">
-							<h2>Вас могут заинтересовать</h2>
+							<h2>Примеры выполненных работ</h2>
+						</div>
+						<div class="section__text">
+							<h3>Реализовали <span>более 15 000</span> вывесок <span>в 30 сферах</span> бизнесса</h3>
+						</div>
+					</div>
+					<div class="arrows">
+						<div class="btn_slick btn_prev"></div>
+						<div class="btn_slick btn_next"></div>
+					</div>
+				</div>
+				<div class="page__subslider">
+					<div class="page__subslider-item">
+						<img src="img/page_subslider-item-1.jpg" alt="">
+					</div>
+					<div class="page__subslider-item">
+						<img src="img/page_subslider-item-1.jpg" alt="">
+					</div>
+					<div class="page__subslider-item">
+						<img src="img/page_subslider-item-1.jpg" alt="">
+					</div>
+					<div class="page__subslider-item">
+						<img src="img/page_subslider-item-1.jpg" alt="">
+					</div>
+					<div class="page__subslider-item">
+						<img src="img/page_subslider-item-1.jpg" alt="">
+					</div>
+					<div class="page__subslider-item">
+						<img src="img/page_subslider-item-1.jpg" alt="">
+					</div>
+					<div class="page__subslider-item">
+						<img src="img/page_subslider-item-1.jpg" alt="">
+					</div>
+					<div class="page__subslider-item">
+						<img src="img/page_subslider-item-1.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="service">
+		<div class="section__wrapp">
+			<div class="title__wrapp">
+				<div class="title__wrapp-title">
+					<div class="section__title">ВЫВЕСКА <br> ПРОСЛУЖИТ БОЛЕЕ <br> 10 ЛЕТ</div>
+					<div class="section__text">В производстве используем только качественные <br> материалы и комплектующие европейского <br>качества!</div>
+				</div>
+			</div>
+			<div class="inner">
+				<img src="img/service_bg.png" alt="" class="service__img">
+				<div class="item first">
+					<div class="item-circle">+</div>
+					<div class="item-info">
+						<div class="item-info__title">Светодиодные линзованные модули ARB</div>
+						<div class="item-info__text">«2835» с гарантией 3 года равномерно рассеивают свет и потребляют электричества как одна обычная лампочка мощностью 100 Вт.</div>
+					</div>
+				</div>
+				<div class="item second">
+					<div class="item-circle">+</div>
+					<div class="item-info">
+						<div class="item-info__title">Светодиодные линзованные модули ARB</div>
+						<div class="item-info__text">«2835» с гарантией 3 года равномерно рассеивают свет и потребляют электричества как одна обычная лампочка мощностью 100 Вт.</div>
+					</div>
+				</div>
+				<div class="item third">
+					<div class="item-circle">+</div>
+					<div class="item-info">
+						<div class="item-info__title">Светодиодные линзованные модули ARB</div>
+						<div class="item-info__text">«2835» с гарантией 3 года равномерно рассеивают свет и потребляют электричества как одна обычная лампочка мощностью 100 Вт.</div>
+					</div>
+				</div>
+				<div class="item fourth">
+					<div class="item-circle">+</div>
+					<div class="item-info">
+						<div class="item-info__title">Светодиодные линзованные модули ARB</div>
+						<div class="item-info__text">«2835» с гарантией 3 года равномерно рассеивают свет и потребляют электричества как одна обычная лампочка мощностью 100 Вт.</div>
+					</div>
+				</div>
+				<div class="item fifth">
+					<div class="item-circle">+</div>
+					<div class="item-info">
+						<div class="item-info__title">Светодиодные линзованные модули ARB</div>
+						<div class="item-info__text">«2835» с гарантией 3 года равномерно рассеивают свет и потребляют электричества как одна обычная лампочка мощностью 100 Вт.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="preview">
+		<div class="section__wrapp">
+			<div class="preview__left">
+			</div>
+			<div class="perview__right">
+				<div class="title__wrapp">
+					<div class="title__wrapp-title">
+						<div class="section__title">Как будет выглядеть <span>Ваша вывеска?</span></div>
+						<div class="section__text">Получите индивидуальный дизайн проект прямо сейчас!</div>
+					</div>
+				</div>
+				<div class="preview__box">
+					<div class="preview__box-title">
+						<p>Дизайн-проект включает в себя:</p>
+					</div>
+					<div class="preview__box-cont">
+						<ul>
+							<li>Разработку макета вывески, с учетом стиля, цвета и других пожеланий заказчика.</li>
+							<li>Визуализацию фасадной вывески.</li>
+							<li>Визуализацию вывески формата день/ночь.</li>
+							<li>Проработку технических решений.</li>
+						</ul>
+						<div class="preview__box-cont--items">
+							<div class="preview__box-cont--item">
+								<span><img src="img/chronometer_white.svg" alt=""></span>
+								<div class="preview__box-cont--item_text">
+									<p class="preview__box-cont--item_title">Какие сроки?</p>
+									<p>Сроки изготовления составляют до 1 рабочего дня </p>
+								</div>
+							</div>
+							<div class="preview__box-cont--item">
+								<span><img src="img/payment.svg" alt=""></span>
+								<div class="preview__box-cont--item_text">
+									<p class="preview__box-cont--item_title">Стоимость — бесплатно</p>
+									<p>В случае дальнейшего заказа изготовления световой вывески <br> от 10 000 грн</p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="proposition__main">
-					<ul class="proposition__items">
-						<li class="proposition__items-item">
-							<img src="img/menu-bg-1.jpg" alt="">
-							<a href="" class="proposition__items-item--link"><span></span>Объемные буквы</a>
-						</li>
-						<li class="proposition__items-item">
-							<img src="img/menu-bg-2.jpg" alt="">
-							<a href="" class="proposition__items-item--link"><span></span>Крышные конструкции</a>
-						</li>
-						<li class="proposition__items-item">
-							<img src="img/menu-bg-3.jpg" alt="">
-							<a href="" class="proposition__items-item--link"><span></span>Лайтбоксы</a>
-						</li>
-						<li class="proposition__items-item">
-							<img src="img/menu-bg-4.jpg" alt="">
-							<a href="" class="proposition__items-item--link"><span></span>Торцевые вывески</a>
-						</li>
-						<li class="proposition__items-item">
-							<img src="img/menu-bg-5.jpg" alt="">
-							<a href="" class="proposition__items-item--link"><span></span>Стеллы / Пилоны</a>
-						</li>
-						<li class="proposition__items-item">
-							<img src="img/menu-bg-6.jpg" alt="">
-							<a href="" class="proposition__items-item--link"><span></span>Интерьерные рекламы</a>
-						</li>
-						<li class="proposition__items-item">
-							<img src="img/menu-bg-7.jpg" alt="">
-							<a href="" class="proposition__items-item--link"><span></span>Рекламные конструкции</a>
-						</li>
-						<li class="proposition__items-item">
-							<img src="img/menu-bg-8.jpg" alt="">
-							<a href="" class="proposition__items-item--link"><span></span>Вывески</a>
-						</li>
+				<div class="preview__down">
+					<div class="preview__form-title">
+						<p>Оставьте свои контактные данные и <br> специалист свяжется с вами <br> <span>в течение 7 минут</span></p>
+					</div>
+					<form action="" class="preview__form">
+						<input type="tel" class="preview__form-input" placeholder="Введите телефон">
+						<button class="btn preview__form-btn">Получить сейчас</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="system">
+		<div class="system-container">
+			<div class="slider">
+				<div class="slide">
+					<img src="img/system-img.jpg" alt="" class="slide__img">
+					<div class="slide-inner">
+						<div class="slide__title">Применяем <span>трёх уровневую</span> систему контроля качества</div>
+						<div class="slide-text">
+							<div class="slide__subtitle">Опытная команда</div>
+							<div class="slide__text">Главный специалист из отдела монтажной бригады контроллирует соблюдение всех
+								технологий и норм во время монтажных работ. Работу выполняют только те специалисты, у которых опыт
+								работы составляет <strong>более 10 лет</strong>, а также у кого имеется <strong>официальный
+									доступ</strong> к высотным работам.</div>
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<img src="img/system-img.jpg" alt="" class="slide__img">
+					<div class="slide-inner">
+						<div class="slide__title">Применяем <span>трёх уровневую</span> систему контроля качества</div>
+						<div class="slide-text">
+							<div class="slide__subtitle">Опытная команда</div>
+							<div class="slide__text">Главный специалист из отдела монтажной бригады контроллирует соблюдение всех
+								технологий и норм во время монтажных работ. Работу выполняют только те специалисты, у которых опыт
+								работы составляет <strong>более 10 лет</strong>, а также у кого имеется <strong>официальный
+									доступ</strong> к высотным работам.</div>
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<img src="img/system-img.jpg" alt="" class="slide__img">
+					<div class="slide-inner">
+						<div class="slide__title">Применяем <span>трёх уровневую</span> систему контроля качества</div>
+						<div class="slide-text">
+							<div class="slide__subtitle">Опытная команда</div>
+							<div class="slide__text">Главный специалист из отдела монтажной бригады контроллирует соблюдение всех
+								технологий и норм во время монтажных работ. Работу выполняют только те специалисты, у которых опыт
+								работы составляет <strong>более 10 лет</strong>, а также у кого имеется <strong>официальный
+									доступ</strong> к высотным работам.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="controls">
+				<div class="progress">
+					<svg class="progress-line" fill="none">
+						<circle cx="58.5" cy="58.5" r="54" stroke-width="11" stroke-linecap="round"
+							style="stroke-dashoffset: -330" />
+					</svg>
+					<div class="counter">
+						<div class="counter__curr">01</div>
+						<div class="counter__all"></div>
+					</div>
+				</div>
+				<div class="arrows">
+					<div class="arrow arrow_prev"></div>
+					<div class="arrow arrow_next"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="work-sheme">
+		<div class="inner">
+			<div class="section__title">Схема работы
+			</div>
+			<div class="list">
+				<div class="item">
+					<div class="item__text">Выявляем цели и <br> нужды</div>
+				</div>
+				<div class="item">
+					<div class="item__text">Разрабатываем <br> дизайн с <br> визуализацией</div>
+				</div>
+				<div class="item">
+					<div class="item__text">Делаем просчет <br> вариантов по Вашему <br> бюджету</div>
+				</div>
+				<div class="item">
+					<div class="item__text">Заключаем договор</div>
+				</div>
+				<div class="item">
+					<div class="item__text">Запускаем процесс <br> производства</div>
+				</div>
+				<div class="item">
+					<div class="item__text">Проводим монтажные <br> работы</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="proposition">
+		<div class="section__wrapp">
+			<div class="section__title">Вас могут заинтересовать</div>
+			<div class="proposition__main">
+				<ul class="proposition__items">
+					<li class="proposition__items-item">
+						<img src="img/menu-bg-1.jpg" alt="">
+						<a href="" class="proposition__items-item--link"><span></span>Объемные буквы</a>
+					</li>
+					<li class="proposition__items-item">
+						<img src="img/menu-bg-2.jpg" alt="">
+						<a href="" class="proposition__items-item--link"><span></span>Крышные конструкции</a>
+					</li>
+					<li class="proposition__items-item">
+						<img src="img/menu-bg-3.jpg" alt="">
+						<a href="" class="proposition__items-item--link"><span></span>Лайтбоксы</a>
+					</li>
+					<li class="proposition__items-item">
+						<img src="img/menu-bg-4.jpg" alt="">
+						<a href="" class="proposition__items-item--link"><span></span>Торцевые вывески</a>
+					</li>
+					<li class="proposition__items-item">
+						<img src="img/menu-bg-5.jpg" alt="">
+						<a href="" class="proposition__items-item--link"><span></span>Стеллы / Пилоны</a>
+					</li>
+					<li class="proposition__items-item">
+						<img src="img/menu-bg-6.jpg" alt="">
+						<a href="" class="proposition__items-item--link"><span></span>Интерьерные рекламы</a>
+					</li>
+					<li class="proposition__items-item">
+						<img src="img/menu-bg-7.jpg" alt="">
+						<a href="" class="proposition__items-item--link"><span></span>Рекламные конструкции</a>
+					</li>
+					<li class="proposition__items-item">
+						<img src="img/menu-bg-8.jpg" alt="">
+						<a href="" class="proposition__items-item--link"><span></span>Вывески</a>
+					</li>
+				</ul>
+			</div>
+	</section>
+	<section id="offering">
+		<div class="section__wrapp">
+			<img src="img/man.png" alt="" class="offering__man">
+			<div class="offering__right">
+				<div class="title__wrapp">
+					<div class="title__wrapp-title">
+						<div class="section__title">При заказе световых вывесок <br> Вы получите дизайн-макет</div>
+						<div class="section__description">с бесплатной<br> визуализацией</div>
+						<div class="section__text"><span>В течении 9 минут</span> мы проведем расчет цены <br> вашего проекта</div>
+						<div class="offering__noties">*Расчет стоимости зависит от качества материалов, стоимости <br> работ и
+							конечной маржи рекламной компании.</div>
+					</div>
+				</div>
+				<div class="offering__box">
+					<form action="" class="offering__form">
+						<input type="text" class="offering__form-input" placeholder="Как Вас зовут?">
+						<input type="tel" class="offering__form-input" placeholder="Введите телефон">
+						<input type="text" class="offering__form-input" placeholder="E-mail">
+						<textarea name="" id="" placeholder="Сообщение" class="offering__form-textarea" rows="4"></textarea>
+
+						<div class="fileinput-wrap">
+							<input type="file" name="file" id="file" class="inputfile"
+								data-multiple-caption="{count} файлa(ов) выбрано" multiple />
+							<label for="file"><span>Прикрепить файл</span></label>
+						</div>
+
+						<!-- <label for="input__file" class="add_file">Прикрепить файл</label>
+							<input type="file" name="file" id="input__file" style="display: none"> -->
+						<button class="btn offering__form-btn"><span>Получить рассчет</span></button>
+						<label for="" class="offering__form-label">* Нажимая кнопку, вы соглашаетесь с условиями политики
+							конфиденциальности</label>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<footer id="footer">
+		<div class="section__wrapp">
+			<a href="index.html" class="logo">
+				<img class="logo__img" src="img/logo.svg" alt="logo">
+			</a>
+			<div class="footer__box">
+				<div class="footer__menu">
+					<div class="footer__menu-title">
+						Навигация
+					</div>
+					<ul class="footer__nav">
+						<li><a href="index.html">Главная</a></li>
+						<li><a href="">О нас</a></li>
+						<li><a href="">Цены</a></li>
+						<li><a href="">Отзывы</a></li>
+						<li><a href="">Блог</a></li>
+						<li><a href="">Контакты</a></li>
 					</ul>
 				</div>
-		</section>
-		<section id="offering">
-			<div class="section__wrapp">
-				<!-- <div class="offering__left">
-				</div> -->
-				<img src="img/man.png" alt="" class="offering__man">
-				<div class="offering__right">
-					<div class="title__wrapp">
-						<div class="title__wrapp-title">
-							<div class="section__title">
-								<h2>При заказе световой вывески — дизайн макет</h2>
-							</div>
-							<div class="section__description">
-								<h3>с бесплатной визуализацией</h3>
-							</div>
-							<div class="section__text">
-								<p><span>В течении 12 минут</span> мы проведем расчет цены <br> вашего проекта </p>
-							</div>
-							<div class="offering__noties">
-								<p>*Расчет стоимости зависит от качества материалов, стоимости <br> работ и конечной маржи рекламной
-									компании.
-								</p>
-							</div>
-						</div>
+				<div class="footer__menu">
+					<div class="footer__menu-title">
+						Каталог
 					</div>
-					<div class="offering__box">
-						<form action="" class="offering__form">
-							<input type="text" class="offering__form-input" placeholder="Как Вас зовут?">
-							<input type="tel" class="offering__form-input" placeholder="Введите телефон">
-							<input type="text" class="offering__form-input" placeholder="E-mail">
-							<textarea name="" id="" placeholder="Сообщение" class="offering__form-textarea" rows="4"></textarea>
-							
-							<div class="fileinput-wrap">
-								<input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} файлa(ов) выбрано" multiple />
-								<label for="file"><span>Прикрепить файл</span></label>
-							</div>
-	
-							<!-- <label for="input__file" class="add_file">Прикрепить файл</label>
-							<input type="file" name="file" id="input__file" style="display: none"> -->
-							<button class="btn offering__form-btn"><span>Получить рассчет</span></button>
-							<label for="" class="offering__form-label">* Нажимая кнопку, вы соглашаетесь с условиями политики
-								конфиденциальности</label>
-						</form>
-					</div>
+					<ul class="footer__nav">
+						<li><a href="vuveska.html">Вывески</a></li>
+						<li><a href="">Торцевые вывески</a></li>
+						<li><a href="">Лайтбоксы</a></li>
+						<li><a href="">Стеллы, пилоны</a></li>
+						<li><a href="">Обьемные буквы</a></li>
+						<li><a href="">Крышные конструкции</a></li>
+						<li><a href="">Интерьерная реклама</a></li>
+						<li><a href="">Рекламные конструкции</a></li>
+					</ul>
 				</div>
 			</div>
-		</section>
-		
+			<div class="call_back">
+				<a class="phone_numb" href="tel:+380676199313">+38 (067) <span>619 93 13</span></a>
+				<a href="#modal_cena" class="call_back-modal popup-link">Заказать звонок</a>
+			</div>
+		</div>
+	</footer>
+	<section id="copy">
+		<p>Разработано студией <a href="https://seox.com.ua/" target="_blank" rel="noopener noreferrer">SeoX</a></p>
+	</section>
+	<!-- libs -->
+	<link rel="stylesheet" href="libs/jquery.fancybox.min.css">
+	<!-- <link rel="stylesheet" href="libs/animate.css"> -->
+	<!-- <link rel="stylesheet" href="libs/slick-theme.css"> -->
+	<link rel="stylesheet" href="libs/slick.css">
+	<link rel="stylesheet" href="libs/Magnific-Popup-master/dist/magnific-popup.css">
 
-		<footer id="footer">
-			<div class="section__wrapp">
-				<div class="footer__logo">
-					<a href="" class="logo">
-						<img src="img/logo.png" alt="logo">
-					</a>
-				</div>
-				<div class="footer__box">
-					<div class="footer__menu">
-						<div class="footer__menu-title">
-							Навигация
-						</div>
-						<ul class="footer__nav">
-							<li><a href="index.html">Главная</a></li>
-							<li><a href="">О нас</a></li>
-							<li><a href="">Цены</a></li>
-							<li><a href="">Отзывы</a></li>
-							<li><a href="">Блог</a></li>
-							<li><a href="">Контакты</a></li>
-						</ul>
-					</div>
-					<div class="footer__menu">
-						<div class="footer__menu-title">
-							Каталог
-						</div>
-						<ul class="footer__nav">
-							<li><a href="vuveska.html">Вывески</a></li>
-							<li><a href="">Торцевые вывески</a></li>
-							<li><a href="">Лайтбоксы</a></li>
-							<li><a href="">Стеллы, пилоны</a></li>
-							<li><a href="">Обьемные буквы</a></li>
-							<li><a href="">Крышные конструкции</a></li>
-							<li><a href="">Интерьерная реклама</a></li>
-							<li><a href="">Рекламные конструкции</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="call_back">
-					<div class="phone_numb">
-						<a href="tel:+380676199313">+38 (067) <span>619 93 13</span></a>
-					</div>
-					<a href="#modal_cena" class="call_back-modal popup-link">Заказать звонок</a>
-				</div>
-			</div>
-		</footer>
-		<section id="copy">
-			<p>Разработано студией <a href="https://mnogoland.ru/" target="_blank" rel="noopener noreferrer">Mnogoland</a></p>
-		</section>
-		<!-- libs -->
-		<link rel="stylesheet" href="libs/jquery.fancybox.min.css">
-		<!-- <link rel="stylesheet" href="libs/animate.css"> -->
-		<!-- <link rel="stylesheet" href="libs/slick-theme.css"> -->
-		<link rel="stylesheet" href="libs/slick.css">
-		<link rel="stylesheet" href="libs/Magnific-Popup-master/dist/magnific-popup.css">
-	
-		<script src="libs/jquery/dist/jquery.min.js"></script>
-		<script src="libs/jquery.fancybox.min.js"></script>
-		<script src="libs/slick.min.js"></script>
-		<script src="libs/Magnific-Popup-master/dist/jquery.magnific-popup.min.js"></script>
-		<script src="libs/Inputmask-5.x/dist/jquery.inputmask.min.js"></script>
-	
-		<script src="js/common.js"></script>
-	
-	
-	</body>
-	
-	</html>
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+	<script src="libs/jquery.fancybox.min.js"></script>
+	<script src="libs/slick.min.js"></script>
+	<script src="libs/Magnific-Popup-master/dist/jquery.magnific-popup.min.js"></script>
+	<script src="libs/Inputmask-5.x/dist/jquery.inputmask.min.js"></script>
+
+	<script src="js/common.js"></script>
+
+
+</body>
+
+</html>

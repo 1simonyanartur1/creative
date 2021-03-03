@@ -400,47 +400,47 @@ body
 	.title__wrapp
 		display: flex
 		align-items: center
-		.title__wrapp-title
-			position: relative
-			display: flex
-			flex-direction: column
-			align-items: flex-start
-			color: $white
-			z-index: 2
-			.section__title
-				text-transform: uppercase
-				font-weight: 800
-				font-size: 36px
-				&:before
-					content: ""
-					position: absolute
-					top: 20px
-					left: -65px
-					display: block
-					height: 3px
-					width: 50px
-					margin-right: 10px
-					background-color: $accent
-					box-shadow: $shadow-line
-				span
-					color: $accsent
-			.section__description
-				margin-top: 17px
-				text-transform: uppercase
-				h3
-					font-weight: 800
-					font-size: 43px
-					background: $text-gradient
-					-webkit-background-clip: text
-					-webkit-text-fill-color: transparent
-				span
-					color: $accsent
-			.section__text
-				line-height: 1.7
-				font-size: 18px
-				margin-top: 45px
-				span
-					color: $accsent
+	.title__wrapp-title
+		position: relative
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		color: $white
+		z-index: 2
+	.section__title
+		text-transform: uppercase
+		font-weight: 800
+		font-size: 36px
+		&:before
+			content: ""
+			position: absolute
+			top: 20px
+			left: -65px
+			display: block
+			height: 3px
+			width: 50px
+			margin-right: 10px
+			background-color: $accent
+			box-shadow: $shadow-line
+		span
+			color: $accsent
+	.section__description
+		margin-top: 17px
+		text-transform: uppercase
+		h3
+			font-weight: 800
+			font-size: 43px
+			background: $text-gradient
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+		span
+			color: $accsent
+	.section__text
+		line-height: 1.7
+		font-size: 18px
+		margin-top: 45px
+		span
+			color: $accsent
 .call_back
 	display: flex
 	flex-direction: column
@@ -1016,11 +1016,6 @@ header
 #work .section__wrapp .portfolio__main .filter .portfolio__filter li
 	margin: 1%
 
-
-// Finish Section Work //
-
-// Start Section Pride //
-
 #pride
 	padding: 55px 0
 	.section__wrapp
@@ -1301,6 +1296,18 @@ header
 			position: absolute
 			width: 440px
 			display: none
+			&-num
+				display: none
+				background: #03B149
+				border-radius: 100%
+				color: white
+				width: 20px
+				height: 20px
+				font-size: 12px
+				align-items: center
+				justify-content: center
+				@media (max-width: 700px)
+					display: flex
 			&__title
 				font-weight: 700
 				font-size: 16px
@@ -1309,6 +1316,45 @@ header
 			&__text
 				font-size: 16px
 				line-height: 1.4
+
+	.mobile-numbers
+		display: none
+		position: absolute
+		width: 100%
+		height: 225px
+		left: 0
+		top: 0
+		z-index: 2
+		@media (max-width: 700px)
+			display: block
+		&__num
+			position: absolute
+			width: 30px
+			height: 30px
+			display: flex
+			align-items: center
+			justify-content: center
+			color: #fff
+			font-size: 14px
+			font-weight: 800
+			cursor: pointer
+			background: #03B149
+			border-radius: 100%
+			&.first
+				bottom: 20%
+				left: 15%
+			&.second
+				top: 20%
+				left: 35%
+			&.third
+				bottom: 15%
+				left: 50%
+			&.fourth
+				right: 25%
+				top: 40%
+			&.fifth
+				right: 0
+				bottom: 15%
 
 .system
 	padding: 100px 0
@@ -1554,10 +1600,6 @@ header
 	pointer-events: none
 	opacity: 0.5
 
-// Finish Section SLider //
-
-// Start Section Preview //
-
 #preview
 	position: relative
 	background-image: url('../img/prev_bg.jpg')
@@ -1690,10 +1732,6 @@ header
 			font-weight: 700
 			width: 236px
 
-// Finish Section Preview //
-
-// Start Section Review //
-
 #review
 	.actions
 		margin: 0 0 0 auto
@@ -1800,10 +1838,6 @@ header
 				display: block
 				width: 100%
 
-// Finish Section Review //
-
-// Start Section Bonus//
-
 #bonus
 	.section__wrapp
 		margin: 0 auto
@@ -1875,10 +1909,6 @@ header
 				height: 100%
 				background: $previlage-border-right
 				background-repeat: no-repeat
-
-// Finish Section Bonus //
-
-// Start Section Offering //
 
 #offering
 	position: relative
@@ -2013,10 +2043,6 @@ header
 			text-align: center
 			font-size: 12px
 
-// Finish Section Offering //
-
-// Start Section Footer //
-
 footer
 	padding: 70px 0
 	.section__wrapp
@@ -2063,8 +2089,6 @@ footer
 	.call_back
 		margin: 0 0 0 auto
 
-// Finish Section Footer //
-
 #copy
 	display: flex
 	justify-content: center
@@ -2076,8 +2100,6 @@ footer
 		&:hover
 			color: $accent
 
-// Start Section Page //
-
 #page
 	padding: 25px 0
 	.section__wrapp
@@ -2085,226 +2107,223 @@ footer
 		max-width: 1280px
 		padding: 0 15px
 		width: 100%
-		.page__content
+	.page__content
+		&.big-center
+			text-align: center
+			.page__box
+				max-width: 1020px
+				width: 100%
+				margin: 0 auto
+				.page__box-content
+					max-width: 100%
+		.page__content-item
+			border-radius: 7px
+			box-shadow: $shadow-form
+			display: flex
+			align-items: flex-start
+			justify-content: space-between
+			flex-wrap: wrap
+			margin: 30px 0
+			padding: 40px
+			.page__content-item--photo
+				width: 49%
+				img
+					display: block
+					width: 100%
+					border-radius: 15px
+			.page__content-item--box
+				width: 49%
+				.page__content-item--title
+					margin-bottom: 35px
+					&.small
+						h3
+							font-size: 24px
+					h3
+						font-size: 34px
+						font-weight: 700
+				p
+					line-height: 1.8
+		.rev
+			display: flex
+			flex-direction: row-reverse
+		.page__box
+			padding: 25px 0 50px
+			display: flex
+			align-items: flex-start
+			flex-wrap: wrap
+			justify-content: space-between
 			&.big-center
 				text-align: center
-				.page__box
-					max-width: 1020px
-					width: 100%
-					margin: 0 auto
-					.page__box-content
-						max-width: 100%
-			.page__content-item
-				border-radius: 7px
-				box-shadow: $shadow-form
-				display: flex
-				align-items: flex-start
-				justify-content: space-between
-				flex-wrap: wrap
-				margin: 30px 0
-				padding: 40px
-				.page__content-item--photo
-					max-width: 510px
-					width: 100%
-					img
-						display: block
-						width: 100%
-						border-radius: 15px
-				.page__content-item--box
-					max-width: 625px
-					width: 100%
-					.page__content-item--title
-						margin-bottom: 35px
-						&.small
-							h3
-								font-size: 24px
-						h3
-							font-size: 34px
-							font-weight: 700
+				.page__box-content
+					margin: 0 auto !important
+			.page__box-content
+				width: 49%
+				flex-direction: column
+				&:last-child
+					margin-right: 0
+				.page__box-content--title
+					h3
+						font-weight: 800
+						font-size: 34px
+				.page__box-content--text
+					margin-top: 35px
 					p
 						line-height: 1.8
-			.rev
-				display: flex
-				flex-direction: row-reverse
-				.page__content-item--box
-					margin-right: 35px
-			.page__box
-				padding: 25px 0 50px
-				display: flex
-				align-items: center
-				flex-wrap: wrap
-				justify-content: space-between
-				.page__box-content
-					max-width: 625px
+			.page__box-img
+				max-width: 510px
+				width: 100%
+				img
+					display: block
 					width: 100%
+					border-radius: 15px
+		.slider__items
+			border-radius: 7px
+			box-shadow: $shadow-form
+			padding: 40px
+			padding-right: 170px
+			margin-bottom: 55px
+			width: 1250px
+			.slider__items-item
+				position: relative
+				display: flex
+				.slider__items-item--img
+					border-radius: 17px
+					overflow: hidden
+					width: 100%
+					img
+						width: 515px
+						object-fit: contain
+				.slider__items-item--box
+					width: 100%
+					display: flex
 					flex-direction: column
-					&:last-child
-						margin-right: 0
-					.page__box-content--title
+					justify-content: space-between
+					margin-left: 35px
+					.slider__items-item--title
+						color: $color-text
+						margin-top: 15px
+						position: relative
 						h3
 							font-weight: 800
-							font-size: 34px
-					.page__box-content--text
-						margin-top: 35px
+							font-size: 40px
+							line-height: 1.3
+						span
+							color: $accent
+						&:before
+							content: ""
+							position: absolute
+							top: -10px
+							left: 0
+							display: block
+							height: 3px
+							width: 50px
+							margin-right: 10px
+							background-color: $accent
+							box-shadow: $shadow-line
+						.slider__items-item--description
+							color: $color-text
+							margin-top: 5px
+							p
+								font-weight: 500
+								font-size: 18px
+					.slider__items-item--text
+						margin-top: 25px
+						border-radius: 16px
+						background-color: $white
+						padding: 0
+						width: 100%
+						h4
+							color: $accent
+							font-size: 24px
+							font-weight: 700
+							margin-bottom: 15px
 						p
 							line-height: 1.8
-				.page__box-img
-					max-width: 510px
-					width: 100%
+		.slider__circle
+			position: absolute
+			right: 15%
+			.slider_slider-count
+				top: 160px
+				right: 50px
+		.title__wrapp
+			padding: 0
+		.title__wrapp-title
+			margin-top: 55px
+		.section__title
+			position: relative
+			color: $color-text
+		.section__text
+			color: $color-text
+			p
+				line-height: 1.8
+			img
+				display: block
+				width: 100%
+				border-radius: 15px
+		.proposition__main
+			.proposition__items
+				display: flex
+				flex-direction: row
+				flex-wrap: wrap
+				margin-top: 30px
+				.proposition__items-item
+					position: relative
+					width: 32.3%
+					margin: .5%
+					overflow: hidden
 					img
 						display: block
 						width: 100%
-						border-radius: 15px
-			.slider__items
-				border-radius: 7px
-				box-shadow: $shadow-form
-				padding: 40px
-				padding-right: 170px
-				margin-bottom: 55px
-				width: 1250px
-				.slider__items-item
-					position: relative
-					display: flex
-					.slider__items-item--img
 						border-radius: 17px
-						overflow: hidden
+					.proposition__items-item--text
+						position: absolute
+						top: 0
+						left: 0
+						height: 100%
 						width: 100%
-						img
-							width: 515px
-							object-fit: contain
-					.slider__items-item--box
-						width: 100%
-						display: flex
-						flex-direction: column
-						justify-content: space-between
-						margin-left: 35px
-						.slider__items-item--title
-							color: $color-text
-							margin-top: 15px
-							position: relative
-							h3
-								font-weight: 800
-								font-size: 40px
-								line-height: 1.3
-							span
-								color: $accent
-							&:before
-								content: ""
-								position: absolute
-								top: -10px
-								left: 0
-								display: block
-								height: 3px
-								width: 50px
-								margin-right: 10px
-								background-color: $accent
-								box-shadow: $shadow-line
-							.slider__items-item--description
-								color: $color-text
-								margin-top: 5px
-								p
-									font-weight: 500
-									font-size: 18px
-						.slider__items-item--text
-							margin-top: 25px
-							border-radius: 16px
-							background-color: $white
-							padding: 0
-							width: 100%
-							h4
-								color: $accent
-								font-size: 24px
-								font-weight: 700
-								margin-bottom: 15px
-							p
-								line-height: 1.8
-			.slider__circle
-				position: absolute
-				right: 15%
-				.slider_slider-count
-					top: 160px
-					right: 50px
-			.title__wrapp
-				padding: 0
-				.title__wrapp-title
-					margin-top: 55px
-					.section__title
-						color: $color-text
-					.section__text
-						color: $color-text
+						display: none
+						font-weight: 600
+						padding: 0 35px
+						padding-top: 100px
+						color: $white
+						background-color: $bg-section
+						opacity: 0.8
+						transition: $trans
+						border-radius: 17px
 						p
 							line-height: 1.8
-						img
-							display: block
-							width: 100%
-							border-radius: 15px
-			.proposition__main
-				.proposition__items
-					display: flex
-					flex-direction: row
-					flex-wrap: wrap
-					margin-top: 30px
-					.proposition__items-item
-						position: relative
-						width: 32.3%
-						margin: .5%
-						overflow: hidden
-						img
-							display: block
-							width: 100%
-							border-radius: 17px
-						.proposition__items-item--text
-							position: absolute
-							top: 0
-							left: 0
-							height: 100%
-							width: 100%
-							display: none
-							font-weight: 600
-							padding: 0 35px
-							padding-top: 100px
-							color: $white
-							background-color: $bg-section
-							opacity: 0.8
-							transition: $trans
-							border-radius: 17px
-							p
-								line-height: 1.8
-						.proposition__items-item--link
-							display: flex
-							flex-direction: column
-							justify-content: flex-end
-							position: absolute
-							left: 0
-							bottom: 0
-							right: 0
-							top: 0
-							padding: 35px
-							color: $white
-							font-size: 20px
-							font-weight: 800
-							text-transform: uppercase
-							color: $menu-link-hover
-							text-shadow: $menu-link-shadow
-							span
-								&:before
-									content: "—"
-									margin-right: 5px
-									font-weight: 800								
-						&:hover
+					.proposition__items-item--link
+						display: flex
+						flex-direction: column
+						justify-content: flex-end
+						position: absolute
+						left: 0
+						bottom: 0
+						right: 0
+						top: 0
+						padding: 35px
+						color: $white
+						font-size: 20px
+						font-weight: 800
+						text-transform: uppercase
+						color: $menu-link-hover
+						text-shadow: $menu-link-shadow
+						span
 							&:before
-								transition: $trans
-								background-color: transparent
-							.proposition__items-item--link
-								display: none
-								transition: $trans
-							.proposition__items-item--text
-								display: block
-					.active
-						display: block
-// Finish Section Page //
-
-// Start Section Page-Slider //
+								content: "—"
+								margin-right: 5px
+								font-weight: 800								
+					&:hover
+						&:before
+							transition: $trans
+							background-color: transparent
+						.proposition__items-item--link
+							display: none
+							transition: $trans
+						.proposition__items-item--text
+							display: block
+				.active
+					display: block
 
 #page-slider
 	position: relative
@@ -2364,10 +2383,6 @@ footer
 		top: 50px
 		.btn_slick
 			margin: 0 20px
-
-// Finish Section Page-Slider //
-
-// Start Section Proposition //
 
 #proposition
 	position: relative
@@ -2443,10 +2458,6 @@ footer
 				.active
 					display: block
 
-// Finish Section Proposition //
-
-// Start Section Type//
-
 #type
 	position: relative
 	overflow: hidden
@@ -2499,10 +2510,6 @@ footer
 							color: $menu-link-hover
 							text-shadow: $menu-link-shadow
 
-// Finish Section Type //
-
-// Start Section Single Page //
-
 .breadcrumbs
 	width: 100%
 	margin: 20px auto
@@ -2512,9 +2519,11 @@ footer
 	li
 		color: $accent
 		list-style: disc
-		margin-right: 25px
+		// margin-right: 25px
 		&:first-child
 			list-style: none
+		&:not(:first-child)
+			margin: 0 0 0 30px
 		a
 			color: $accent
 .page__title
@@ -2537,10 +2546,6 @@ footer
 		margin-right: 10px
 		background-color: $accent
 		box-shadow: $shadow-line
-
-// Finish Section Single Page //
-
-// Start Section Single Page //
 
 #singl_page
 	position: relative
@@ -2584,10 +2589,6 @@ footer
 						color: $accsent
 				.header__btn
 					margin-bottom: 40px
-
-// Finish Section Single Page //
-
-// Start Section Reviev Singl Page //
 
 #review__singl_page
 	flex-direction: column
@@ -2662,16 +2663,12 @@ footer
 				font-size: 14px
 				line-height: 1.8
 
-// Finish Section Reviev Singl Page //
-
-// Start Section Blog //
-
 #blog
 	.blog__content
 		display: flex
 		flex-wrap: wrap
 		justify-content: center
-		max-width: 1610px
+		max-width: 1640px
 		width: 100%
 		margin: 0 auto
 		.blog__content-box
@@ -2711,10 +2708,6 @@ footer
 			width: 100%
 			object-fit: cover
 
-// Finish Section Blog //
-
-// Start Section Blog Singl //
-
 #blog_singl
 	.inner
 		max-width: 1610px
@@ -2740,10 +2733,6 @@ footer
 		line-height: 1.7
 		font-size: 17px
 		margin: 0 0 25px 0
-
-// Finish Section Blog Singl //
-
-// Start Section Similar //
 
 #similar
 	padding: 100px 0
@@ -2781,9 +2770,6 @@ footer
 			&__text
 				transition: all .3s ease
 				margin: 15px 0 0 0
-// Finish Section Similar //
-
-// Start Section Contact //
 
 #contact
 	margin: 55px 0
@@ -2852,10 +2838,6 @@ footer
 		border-radius: 7px
 		width: 59%
 
-// Finish Section Contact //
-
-// Start Section About //
-
 #about
 	.about__content
 		padding: 0 5%
@@ -2878,9 +2860,6 @@ footer
 		max-width: 690px
 		width: 100%
 		border-radius: 15px
-// Finish Section About //
-
-// Start Section Pagination //
 
 #pagination
 	margin: 55px 0
@@ -3063,9 +3042,6 @@ footer
 					width: 100%
 					padding-left: 25px
 
-// Finish Section Pagination //
-
-
 .page__title
 	margin: 50px auto
 	width: 100%
@@ -3155,9 +3131,6 @@ footer
 			line-height: 1.4
 			min-height: 80px
 
-
-
-
 .fileinput-wrap
 	position: relative
 	width: 100%
@@ -3199,7 +3172,6 @@ footer
 			color: black
 		& *
 			pointer-events: none
-
 
 .popup
 	background: #FFFFFF
@@ -3304,7 +3276,6 @@ footer
 				width: 100%
 				background: $gradient-btn
 				z-index: -1
-	
 
 .text-container
 	h3
@@ -3314,3 +3285,8 @@ footer
 		font-size: 18px
 		line-height: 1.6
 		margin: 30px 0 0 0
+
+#header.type3
+	.header__main-btn
+		position: static
+		margin: 0 25px

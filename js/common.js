@@ -16,7 +16,7 @@
 		}
 
 		$('input[type="tel"]').inputmask({
-			mask: "+3 (999) 999-99-99",
+			mask: "+38 (999) 999-99-99",
 			greedy: false
 		});
 
@@ -175,6 +175,11 @@
 				settings: {
 					slidesToShow: 2,
 				}
+			},{
+				breakpoint: 575,
+				settings: {
+					slidesToShow: 1,
+				}
 			}]
 		});
 
@@ -184,7 +189,7 @@
 			slidesToScroll: 1,
 			fade: true,
 			arrows: false,
-			asNavFor: '.page__subslider'
+			asNavFor: '.page__subslider',
 		});
 		$('.page__subslider').slick({
 			slidesToShow: 4,
@@ -196,39 +201,14 @@
 			prevArrow: $('#page-slider .btn_prev'),
 			nextArrow: $('#page-slider .btn_next'),
 			focusOnSelect: true,
-			// responsive: [{
-			// 		breakpoint: 1284,
-			// 		settings: {
-			// 			arrows: false,
-			// 			slidesToShow: 2,
-			// 			slidesToScroll: 1,
-			// 		}
-			// 	},
-			// 	{
-			// 		breakpoint: 1024,
-			// 		settings: {
-			// 			arrows: false,
-			// 			slidesToShow: 2,
-			// 			slidesToScroll: 1,
-			// 		}
-			// 	},
-			// 	{
-			// 		breakpoint: 768,
-			// 		settings: {
-			// 			arrows: false,
-			// 			slidesToShow: 1,
-			// 			slidesToScroll: 1,
-			// 		}
-			// 	},
-			// 	{
-			// 		breakpoint: 425,
-			// 		settings: {
-			// 			arrows: false,
-			// 			slidesToShow: 1,
-			// 			slidesToScroll: 1,
-			// 		}
-			// 	}
-			// ]
+			responsive: [{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 1,
+					variableWidth: false,
+					slidesToScroll: 1
+				}
+			}]
 		});
 
 		// Initialize and add the map
@@ -292,12 +272,7 @@
 		$('.slider_slider-count').find($('.slider-count__all4').text(PrependZeros(slick.slideCount, 2)));
 	});
 
-	$('.review-second__slider').on('afterChange', function (event, slick, nextSlide) {
-		$('.review_slider-count').find($('.slider-count__current3').text(PrependZeros(nextSlide + 1, 2)));
-	});
-	$('.review-second__slider').on('init, afterChange', function (event, slick) {
-		$('.review_slider-count').find($('.slider-count__all3').text(PrependZeros(slick.slideCount, 2)));
-	});
+	
 
 	// Отображения номеров слайдов с ноликами для главного слайдера 
 	var PrependZeros = function (str, len, seperator) {
@@ -314,6 +289,15 @@
 			return spl.join(seperator || ' ');
 		}
 	};
+
+	$('.review-second__slider').on('afterChange', function (event, slick, nextSlide) {
+		$('.review_slider-count').find($('.slider-count__current3').text(PrependZeros(nextSlide + 1, 2)));
+	});
+	$('.review-second__slider').on('init, afterChange', function (event, slick) {
+		$('.review_slider-count').find($('.slider-count__all3').text(PrependZeros(slick.slideCount - 3, 2)));
+	});
+
+
 	$('.header__slider').on('init', function (event, slick) {
 		$('.slider-count').find($('.slider-count__all').text(PrependZeros(slick.slideCount, 2)));
 	});
@@ -342,7 +326,7 @@
 	});
 
 	$('.review-second__slider').on('init', function (event, slick) {
-		$('.review_slider-count').find($('.slider-count__all3').text(PrependZeros(slick.slideCount, 2)));
+		$('.review_slider-count').find($('.slider-count__all3').text(PrependZeros(slick.slideCount - 3, 2)));
 	});
 
 	// Filter
