@@ -3,6 +3,11 @@
 
 
 		if ($(document).innerWidth() < 1200) {
+			$('.has-submenu > a').on('click', function(e) {
+				e.preventDefault();
+				$(this).next('.submenu').slideToggle();
+			});
+
 			$('.header__menu-top').hide();
 			$(document).on('click', '#header .burger', function () {
 				if (!$(this).hasClass('active')) {

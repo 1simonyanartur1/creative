@@ -3290,3 +3290,43 @@ footer
 	.header__main-btn
 		position: static
 		margin: 0 25px
+
+
+
+.header__menu-top
+	position: relative
+	z-index: 9
+.has-submenu
+	position: relative
+.submenu
+	display: none
+	overflow: hidden
+	background: white
+	padding: 15px 10px
+	position: absolute
+	left: 0
+	top: 110%
+	width: 260px
+	border-radius: 4px
+	a
+		padding: 5px
+		line-height: 1.4
+		color: #000
+		font-size: 14px
+
+@media only screen and (min-width: 1200px)
+	.has-submenu
+		&:hover
+			.submenu
+				display: block
+	.submenu
+		a
+			&:hover
+				color: #48D08F
+
+
+
+
+
+
+
