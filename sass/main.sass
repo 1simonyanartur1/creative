@@ -608,9 +608,9 @@ header
 			justify-content: center
 			border-radius: 50%
 			background-color: $white
-			padding: 10px
 			height: 40px
 			width: 40px
+			line-height: 1
 			box-shadow: $white-shadow
 			font-weight: 700
 			color: $color-lang
@@ -747,7 +747,6 @@ header
 				margin-right: 15px
 				img
 					height: 65px
-					width: 65px
 				&_title
 					margin-top: 30px
 					margin-bottom: 30px
@@ -2080,7 +2079,7 @@ footer
 			width: 50%
 			padding-right: 10px
 			margin-bottom: 15px
-			white-space: nowrap
+			// white-space: nowrap
 			a
 				color: $color-text4
 				&:hover
@@ -3291,8 +3290,8 @@ footer
 		position: static
 		margin: 0 25px
 
-
-
+.slick-slide
+	height: auto !important
 .header__menu-top
 	position: relative
 	z-index: 9
@@ -3327,6 +3326,40 @@ footer
 
 
 
-
-
+.float-card
+	padding: 30px 15px
+	&.reverse
+		.text-container
+			img
+				float: right
+				margin: 0 0 20px 20px
+	&.type2
+		.container
+			background: none
+			box-shadow: none
+			border-radius: 0
+	.container
+		background: #FFFFFF
+		box-shadow: 0px 4px 25px #C9CACB
+		border-radius: 7px
+		max-width: 1250px
+		width: 100%
+		padding: 40px 40px 20px
+		margin: 0 auto
+	.text-container
+		width: 100%
+		h3
+			font-size: 34px
+		&::after
+			content: ''
+			display: block
+			clear: both
+			height: 0
+			visibility: hidden
+		img
+			margin: 0 20px 20px 0
+			display: block
+			float: left
+			width: 44%
+			border-radius: 15px
 

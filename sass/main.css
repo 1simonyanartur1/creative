@@ -874,9 +874,9 @@ header .header__top .lang {
           justify-content: center;
   border-radius: 50%;
   background-color: #fff;
-  padding: 10px;
   height: 40px;
   width: 40px;
+  line-height: 1;
   -webkit-box-shadow: 0px 2px 12px #ABB9D2;
           box-shadow: 0px 2px 12px #ABB9D2;
   font-weight: 700;
@@ -1102,7 +1102,6 @@ header .header__main-content--item {
 
 header .header__main-content--item img {
   height: 65px;
-  width: 65px;
 }
 
 header .header__main-content--item_title {
@@ -3418,7 +3417,6 @@ footer .footer__nav li {
   width: 50%;
   padding-right: 10px;
   margin-bottom: 15px;
-  white-space: nowrap;
 }
 
 footer .footer__nav li a {
@@ -5367,6 +5365,10 @@ footer .call_back {
   margin: 0 25px;
 }
 
+.slick-slide {
+  height: auto !important;
+}
+
 .header__menu-top {
   position: relative;
   z-index: 9;
@@ -5402,5 +5404,56 @@ footer .call_back {
   .submenu a:hover {
     color: #48D08F;
   }
+}
+
+.float-card {
+  padding: 30px 15px;
+}
+
+.float-card.reverse .text-container img {
+  float: right;
+  margin: 0 0 20px 20px;
+}
+
+.float-card.type2 .container {
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0;
+}
+
+.float-card .container {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 25px #C9CACB;
+          box-shadow: 0px 4px 25px #C9CACB;
+  border-radius: 7px;
+  max-width: 1250px;
+  width: 100%;
+  padding: 40px 40px 20px;
+  margin: 0 auto;
+}
+
+.float-card .text-container {
+  width: 100%;
+}
+
+.float-card .text-container h3 {
+  font-size: 34px;
+}
+
+.float-card .text-container::after {
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.float-card .text-container img {
+  margin: 0 20px 20px 0;
+  display: block;
+  float: left;
+  width: 44%;
+  border-radius: 15px;
 }
 /*# sourceMappingURL=main.css.map */
