@@ -291,22 +291,6 @@ body
 		box-shadow: $product-slider-btn-shadow
 		&:before
 			border-left: 10px solid $product-slider-title-bg
-// .btn_slick5
-// 	background: $white
-// 	&:hover
-// 		box-shadow: none
-// .btn_prev5
-// 	top: 0
-// 	right: 0
-// 	position: absolute
-// 	&:before
-// 		border-right: 10px solid $product-slider-title-bg
-// .btn_next5
-// 	top: 0
-// 	right: 0
-// 	position: absolute
-// 	&:before
-// 		border-left: 10px solid $product-slider-title-bg
 .slider-count
 	// margin-top: 130px
 	// padding-left: 570px
@@ -392,6 +376,33 @@ body
 	justify-content: center
 	width: 100%
 
+.section__title
+	position: relative
+	text-transform: uppercase
+	font-weight: 800
+	font-size: 36px
+	padding-left: 70px
+	&:before
+		content: ""
+		position: absolute
+		top: 20px
+		left: 0
+		display: block
+		height: 3px
+		width: 50px
+		margin-right: 10px
+		background-color: $accent
+		box-shadow: $shadow-line
+	span
+		color: $accsent
+
+.section__text
+	line-height: 1.5
+	font-size: 18px
+	margin-top: 45px
+	color: $black
+	span
+		color: $accsent
 
 .section__wrapp
 	position: relative
@@ -407,23 +418,7 @@ body
 		align-items: flex-start
 		color: $white
 		z-index: 2
-	.section__title
-		text-transform: uppercase
-		font-weight: 800
-		font-size: 36px
-		&:before
-			content: ""
-			position: absolute
-			top: 20px
-			left: -65px
-			display: block
-			height: 3px
-			width: 50px
-			margin-right: 10px
-			background-color: $accent
-			box-shadow: $shadow-line
-		span
-			color: $accsent
+	
 	.section__description
 		margin-top: 17px
 		text-transform: uppercase
@@ -435,12 +430,7 @@ body
 			-webkit-text-fill-color: transparent
 		span
 			color: $accsent
-	.section__text
-		line-height: 1.7
-		font-size: 18px
-		margin-top: 45px
-		span
-			color: $accsent
+	
 .call_back
 	display: flex
 	flex-direction: column
@@ -899,9 +889,9 @@ header
 	.section__title
 		text-align: center
 		color: $white
-		text-transform: uppercase
-		font-weight: 800
-		font-size: 40px
+		padding: 0
+		&:before
+			display: none
 	.section__description
 		font-weight: 500
 		font-size: 22px
@@ -1105,6 +1095,8 @@ header
 	.section__title
 		font-size: 38px
 		position: relative
+	.section__text
+		color: white
 	.section__wrapp
 		display: flex
 		justify-content: space-between
@@ -1189,17 +1181,17 @@ header
 		align-items: center
 		flex-wrap: wrap
 	.title__wrapp
-		max-width: 430px
+		max-width: 500px
 		width: 100%
 	.section__title
 		color: $black
 		font-weight: 800
 		font-size: 40px
-	.section__text
-		font-size: 18px
-		line-height: 1.7
-		margin: 50px 0 0 0
-		color: $black
+	// .section__text
+	// 	font-size: 18px
+	// 	line-height: 1.7
+	// 	margin: 50px 0 0 0
+	// 	color: $black
 	.inner
 		width: calc( 100% - 500px )
 		position: relative
@@ -1471,12 +1463,16 @@ header
 				content: '/'
 
 .system-type2
-	padding: 100px 0
+	padding: 50px 0
 	&.type2
-		.slide__title
-			text-transform: none
-			font-size: 24px
-	&-container
+		.slide
+			.text-container
+				h3
+					font-size: 34px
+					text-transform: none
+	.container
+		position: relative
+		max-width: 1250px
 		width: 100%
 		margin: 0 auto
 		padding: 40px
@@ -1500,40 +1496,33 @@ header
 		align-items: flex-start
 		justify-content: space-between
 		flex-wrap: wrap
-		&__img
-			border-right: 17px
-			display: block
-			max-width: 460px
+		.text-container
 			width: 100%
-		&__title
-			font-size: 40px
-			text-transform: uppercase
-			font-weight: 800
-			color: #3A3A3A
-			margin: 0 0 10px 0
-			&::before
+			h3
+				font-size: 40px
+				text-transform: uppercase
+				font-weight: 800
+				color: #3A3A3A
+				margin: 0 0 10px 0
+			p
+				font-size: 16px
+			h4
+				color: #03B149
+				font-size: 24px
+				font-weight: 700
+				margin: 0 0 13px 0
+			&::after
 				content: ''
 				display: block
-				width: 51px
-				height: 3px
-				background: #03B149
-				box-shadow: 0px 1px 8px #58DF76
-				margin: 0 0 10px 0
-			span
-				color: #03B149
-		&__subtitle
-			color: #03B149
-			font-size: 24px
-			font-weight: 700
-			margin: 0 0 13px 0
-		&__text
-			line-height: 1.4
-			font-size: 16px
-		&-inner
-			max-width: 500px
-			width: 100%
-		&-text
-			margin: 22px 0 0 0
+				clear: both
+				height: 0
+				visibility: hidden
+			img
+				margin: 0 40px 0 0
+				display: block
+				float: left
+				width: 50%
+				border-radius: 15px
 	.arrows
 		display: flex
 		flex-direction: column
@@ -1609,6 +1598,7 @@ header
 		padding: 0
 	.section__text
 		font-weight: 300
+		color: white
 	.section__wrapp
 		margin: 0 auto
 		max-width: 1400px
@@ -1962,6 +1952,7 @@ header
 		font-weight: 300
 		line-height: 1.4
 		font-size: 18px
+		color: white
 		span
 			font-weight: 700
 			color: $accsent
@@ -2327,7 +2318,8 @@ footer
 #page-slider
 	position: relative
 	background-color: $bg-section
-	padding: 50px 0 80px 0
+	padding: 50px 0
+	margin: 50px 0
 	overflow: hidden
 	.section__wrapp .title__wrapp .title__wrapp-title .section__title h2
 		font-size: 36px
@@ -2355,7 +2347,6 @@ footer
 				flex-wrap: wrap
 				.title__wrapp-title
 					padding: 0
-					margin-top: 30px
 					.section__title
 						padding: 0
 						&:before
@@ -2367,7 +2358,7 @@ footer
 						span
 			.page__subslider
 				width: 155%
-				margin: 80px 0 0 0
+				margin: 115px 0 0 0
 				.page__subslider-item
 					margin-right: 25px
 					width: 320px
@@ -2470,44 +2461,42 @@ footer
 		flex-direction: column
 		.title__wrapp
 			padding: 0 0 0 70px
-		.type__main
-			margin-bottom: 55px
-			.type__items
+	.type__items
+		display: flex
+		flex-wrap: wrap
+		margin-top: 30px
+		.type__items-item
+			width: 19%
+			margin: 1% 0.5%
+			opacity: 0.5
+			transition: $trans
+			text-align: center
+			.type__items-item--link
+				color: $white
+				font-size: 20px
+				font-weight: 800
+				text-transform: uppercase
 				display: flex
-				flex-wrap: wrap
-				margin-top: 30px
-				.type__items-item
-					width: 19%
-					margin: 1% 0.5%
-					opacity: 0.5
+				flex-direction: column
+				width: 100%
+				img
+					border-radius: 17px
+					display: block
+					width: 100%
+				span
+					&:before
+						content: "—"
+						margin-right: 5px
+						font-weight: 800								
+			&:hover
+				opacity: 1
+				&:before
 					transition: $trans
-					text-align: center
-					.type__items-item--link
-						color: $white
-						font-size: 20px
-						font-weight: 800
-						text-transform: uppercase
-						display: flex
-						flex-direction: column
-						width: 100%
-						img
-							border-radius: 17px
-							display: block
-							width: 100%
-						span
-							&:before
-								content: "—"
-								margin-right: 5px
-								font-weight: 800								
-					&:hover
-						opacity: 1
-						&:before
-							transition: $trans
-							background-color: transparent
-						.type__items-item--link
-							transition: $trans
-							color: $menu-link-hover
-							text-shadow: $menu-link-shadow
+					background-color: transparent
+				.type__items-item--link
+					transition: $trans
+					color: $menu-link-hover
+					text-shadow: $menu-link-shadow
 
 .breadcrumbs
 	width: 100%
@@ -3062,25 +3051,7 @@ footer
 		width: 100%
 		margin: 0 auto
 	.section__title
-		text-transform: uppercase
-		padding: 70px 0
-		position: relative
-		font-size: 40px
-		font-weight: 800
-		line-height: 1
-		&:before
-			content: ""
-			position: absolute
-			top: 50%
-			transform: translate(0, -50%)
-			left: -65px
-			display: block
-			height: 3px
-			width: 50px
-			margin-right: 10px
-			background-color: #03B149
-			-webkit-box-shadow: 0px 1px 8px #58df76
-			box-shadow: 0px 1px 8px #58df76
+		margin: 50px 0
 	.list
 		display: flex
 		flex-wrap: wrap
@@ -3277,6 +3248,9 @@ footer
 				z-index: -1
 
 .text-container
+	h2
+		font-weight: 700
+		font-size: 34px
 	h3
 		font-weight: 700
 		font-size: 24px
@@ -3324,8 +3298,6 @@ footer
 				color: #48D08F
 
 
-
-
 .float-card
 	padding: 30px 15px
 	&.reverse
@@ -3363,3 +3335,110 @@ footer
 			width: 44%
 			border-radius: 15px
 
+.slick-dots
+	display: flex
+	justify-content: center
+	align-items: center
+	margin: 15px 0
+	li
+		margin: 0 5px
+		&.slick-active button
+			transform: scale(1.1)
+			background: #2D305B
+	button
+		cursor: pointer
+		display: block
+		font-size: 0
+		border-radius: 100%
+		width: 12px
+		height: 12px
+		transition: all .3s ease-out
+		background: rgba(0, 0, 0, 0.5)
+
+
+.lonely-text
+	padding: 40px 0
+	text-align: center
+	.container
+		margin: 0 auto
+		max-width: 1050px
+
+
+.block-maintitle
+	margin: 0 0 25px
+	width: 100%
+	color: $black
+	font-weight: 800
+	font-size: 38px
+	position: relative
+	padding-left: 70px
+	&.type2
+		color: white
+		text-transform: uppercase
+		margin: 50px 0
+	&:before
+		content: ''
+		position: absolute
+		top: 20px
+		left: 0
+		display: block
+		height: 3px
+		width: 50px
+		margin-right: 10px
+		background-color: #03B149
+		box-shadow: 0px 1px 8px #58df76
+
+
+.page-content-block
+	padding: 50px 0
+	.block-maintitle
+		text-transform: uppercase
+	.container
+		margin: 0 auto
+		display: block
+		max-width: 1400px
+	.text-container
+		margin: 45px 0 0 0
+		&::after
+			content: ''
+			display: block
+			visibility: hidden
+			height: 0
+			clear: both
+		img
+			display: block
+			width: 49%
+			border-radius: 17px
+			float: right
+			margin: 0 0 25px 45px
+
+
+
+.lightbox-types
+	padding: 50px 0
+	.container
+		display: block
+		max-width: 1250px
+		margin: 0 auto
+	&-items
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+		flex-wrap: wrap
+		margin: 50px 0 0
+	&__item
+		width: 48%
+		margin: 1%
+		.text-container
+			padding: 0 25px
+	&__img-wrap
+		box-shadow: 0px 4px 25px #C9CACB
+		width: 100%
+		padding: 40px
+		border-radius: 17px
+		margin: 0 0 25px
+	&__img
+		background: white
+		display: block
+		width: 100%
+		border-radius: 17px

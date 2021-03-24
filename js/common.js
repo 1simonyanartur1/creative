@@ -75,6 +75,7 @@
 			dots: false,
 			arrows: true,
 			infinite: false,
+			draggable: false,
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			prevArrow: $('.system .arrow_prev'),
@@ -99,8 +100,16 @@
 			infinite: false,
 			slidesToShow: 1,
 			slidesToScroll: 1,
+			draggable: false,
 			prevArrow: $('.system-type2 .arrow_prev'),
-			nextArrow: $('.system-type2 .arrow_next')
+			nextArrow: $('.system-type2 .arrow_next'),
+			responsive: [{
+				breakpoint: 1025,
+				settings: {
+					arrows: false,
+					dots: true
+				}
+			}]
 		});
 
 		var systemSlideCount1 = $('.system-type2 .slider').slick("getSlick").slideCount;
