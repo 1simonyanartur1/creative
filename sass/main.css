@@ -1087,7 +1087,7 @@ header .header__main-left {
 header .header__main-title {
   text-transform: uppercase;
   font-weight: 800;
-  font-size: 45px;
+  font-size: 42px;
   line-height: 1.5;
 }
 
@@ -3002,6 +3002,24 @@ header .header__noties p {
   width: 100%;
 }
 
+.page-about {
+  padding: 20px 0 50px;
+}
+
+.page-about .container {
+  max-width: 1640px;
+  margin: 0 auto;
+  display: block;
+}
+
+.page-about .text-container img {
+  float: right;
+  margin: 0 0 20px 40px;
+  display: block;
+  width: 42%;
+  border-radius: 17px;
+}
+
 #bonus .section__wrapp {
   margin: 0 auto;
   max-width: 1600px;
@@ -3934,6 +3952,10 @@ footer .call_back {
   padding: 80px 0;
 }
 
+#proposition .block-maintitle {
+  margin: 0;
+}
+
 #proposition .section__wrapp {
   max-width: 1740px;
   width: 100%;
@@ -4136,6 +4158,10 @@ footer .call_back {
   text-shadow: 0px 0px 15px #46FC8F;
 }
 
+#type .block-maintitle {
+  margin: 0;
+}
+
 .breadcrumbs {
   width: 100%;
   margin: 20px auto;
@@ -4197,6 +4223,10 @@ footer .call_back {
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+}
+
+#singl_page .section__text {
+  color: white;
 }
 
 #singl_page:before {
@@ -4368,6 +4398,12 @@ footer .call_back {
           box-shadow: 0px 4px 25px #C9CACB;
   padding: 40px;
   margin: 1%;
+}
+
+#review__singl_page .review__content .review__content-box--img {
+  display: block;
+  width: 25%;
+  margin: 0 0 10px 0;
 }
 
 #review__singl_page .review__content .review__content-box .review__content-box--title {
@@ -5386,7 +5422,7 @@ footer .call_back {
 
 .float-card.reverse .text-container img {
   float: right;
-  margin: 0 0 20px 20px;
+  margin: 0 0 20px 40px;
 }
 
 .float-card.type2 .container {
@@ -5424,7 +5460,7 @@ footer .call_back {
 }
 
 .float-card .text-container img {
-  margin: 0 20px 20px 0;
+  margin: 0 40px 20px 0;
   display: block;
   float: left;
   width: 44%;
@@ -5488,8 +5524,12 @@ footer .call_back {
 
 .block-maintitle.type2 {
   color: white;
-  text-transform: uppercase;
   margin: 50px 0;
+  text-transform: uppercase;
+}
+
+.block-maintitle.type3 {
+  text-transform: uppercase;
 }
 
 .block-maintitle:before {
@@ -5538,6 +5578,34 @@ footer .call_back {
   border-radius: 17px;
   float: right;
   margin: 0 0 25px 45px;
+}
+
+.letters-info {
+  padding: 50px 0;
+}
+
+.letters-info .container {
+  display: block;
+  max-width: 1250px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.letters-info .inner {
+  margin: 25px 0 0 0;
+  width: 100%;
+}
+
+.letters-info .text-container img {
+  display: block;
+  width: 100%;
+  border-radius: 17px;
+  margin: 35px 0;
+}
+
+.letters-info .text-container p {
+  -webkit-column-count: 2;
+          column-count: 2;
 }
 
 .lightbox-types {

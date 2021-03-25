@@ -466,7 +466,6 @@ body
 		border-bottom: 2px solid transparent
 		color: $color-text2
 
-
 .header__btn
 	margin-top: 50px
 	display: flex
@@ -534,7 +533,6 @@ body
 		margin: 0 -15px 0 0
 	.btn_slick
 		margin: 20px
-
 
 header
 	position: relative
@@ -727,7 +725,7 @@ header
 		&-title
 			text-transform: uppercase
 			font-weight: 800
-			font-size: 45px
+			font-size: 42px
 			line-height: 1.5
 		&-content
 			margin-top: 65px
@@ -835,8 +833,6 @@ header
 			box-shadow: 0px 4px 24px 0px rgba(255, 255, 255, 0.8)
 			border-radius: 15px
 			overflow: hidden
-
-
 
 #privilege
 	padding: 60px 0
@@ -1827,6 +1823,20 @@ header
 				display: block
 				width: 100%
 
+.page-about
+	padding: 20px 0 50px
+	.container
+		max-width: 1640px
+		margin: 0 auto
+		display: block
+	.text-container
+		img
+			float: right
+			margin: 0 0 20px 40px
+			display: block
+			width: 42%
+			border-radius: 17px
+
 #bonus
 	.section__wrapp
 		margin: 0 auto
@@ -2377,6 +2387,8 @@ footer
 #proposition
 	position: relative
 	padding: 80px 0
+	.block-maintitle
+		margin: 0
 	.section__wrapp
 		max-width: 1740px
 		width: 100%
@@ -2497,6 +2509,8 @@ footer
 					transition: $trans
 					color: $menu-link-hover
 					text-shadow: $menu-link-shadow
+	.block-maintitle
+		margin: 0
 
 .breadcrumbs
 	width: 100%
@@ -2541,6 +2555,8 @@ footer
 	background-repeat: no-repeat
 	background-size: cover
 	text-align: center
+	.section__text
+		color: white
 	&:before
 		content: ""
 		position: absolute
@@ -2640,6 +2656,10 @@ footer
 			box-shadow: $shadow-form
 			padding: 40px
 			margin: 1%
+			&--img
+				display: block
+				width: 25%
+				margin: 0 0 10px 0
 			.review__content-box--title
 				font-weight: 700
 				font-size: 21px
@@ -3297,14 +3317,13 @@ footer
 			&:hover
 				color: #48D08F
 
-
 .float-card
 	padding: 30px 15px
 	&.reverse
 		.text-container
 			img
 				float: right
-				margin: 0 0 20px 20px
+				margin: 0 0 20px 40px
 	&.type2
 		.container
 			background: none
@@ -3329,7 +3348,7 @@ footer
 			height: 0
 			visibility: hidden
 		img
-			margin: 0 20px 20px 0
+			margin: 0 40px 20px 0
 			display: block
 			float: left
 			width: 44%
@@ -3355,14 +3374,12 @@ footer
 		transition: all .3s ease-out
 		background: rgba(0, 0, 0, 0.5)
 
-
 .lonely-text
 	padding: 40px 0
 	text-align: center
 	.container
 		margin: 0 auto
 		max-width: 1050px
-
 
 .block-maintitle
 	margin: 0 0 25px
@@ -3374,8 +3391,10 @@ footer
 	padding-left: 70px
 	&.type2
 		color: white
-		text-transform: uppercase
 		margin: 50px 0
+		text-transform: uppercase
+	&.type3
+		text-transform: uppercase
 	&:before
 		content: ''
 		position: absolute
@@ -3387,7 +3406,6 @@ footer
 		margin-right: 10px
 		background-color: #03B149
 		box-shadow: 0px 1px 8px #58df76
-
 
 .page-content-block
 	padding: 50px 0
@@ -3412,7 +3430,24 @@ footer
 			float: right
 			margin: 0 0 25px 45px
 
-
+.letters-info
+	padding: 50px 0
+	.container
+		display: block
+		max-width: 1250px
+		width: 100%
+		margin: 0 auto
+	.inner
+		margin: 25px 0 0 0
+		width: 100%
+	.text-container
+		img
+			display: block
+			width: 100%
+			border-radius: 17px
+			margin: 35px 0
+		p
+			column-count: 2
 
 .lightbox-types
 	padding: 50px 0
