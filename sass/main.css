@@ -719,6 +719,7 @@ body {
 
 #header {
   position: relative;
+  background-attachment: fixed;
   background-image: url("../img/header_bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1702,6 +1703,7 @@ header .header__noties p {
 
 #product {
   position: relative;
+  background-attachment: fixed;
   background-image: url("../img/productions_bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -2584,6 +2586,7 @@ header .header__noties p {
 
 #preview {
   position: relative;
+  background-attachment: fixed;
   background-image: url("../img/prev_bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -3132,6 +3135,7 @@ header .header__noties p {
 }
 
 #offering {
+  background-attachment: fixed;
   position: relative;
   background-image: url("../img/offering_bg.jpg");
   background-repeat: no-repeat;
@@ -3324,8 +3328,7 @@ header .header__noties p {
   border-radius: 45px;
   padding: 15px;
   width: 80%;
-  margin-top: 25px;
-  margin-bottom: 10px;
+  margin: 10px 0 0 0;
   font-weight: 700;
   position: relative;
   z-index: 2;
@@ -3357,6 +3360,15 @@ header .header__noties p {
   width: 100%;
   text-align: center;
   font-size: 12px;
+  margin: 20px 0 0;
+}
+
+#offering .offering__form-label a {
+  color: black;
+}
+
+#offering .offering__form-label a:hover {
+  color: #1DE36D;
 }
 
 footer {
@@ -4219,6 +4231,7 @@ footer .call_back {
 
 #singl_page {
   position: relative;
+  background-attachment: fixed;
   background-image: url("../img/offering_bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -5026,7 +5039,7 @@ footer .call_back {
 
 #work-sheme {
   padding: 30px 0 70px;
-  background: url("../img/work-sheme-bg.jpg") no-repeat center center/cover;
+  background: fixed url("../img/work-sheme-bg.jpg") no-repeat center center/cover;
   color: white;
 }
 
@@ -5245,7 +5258,6 @@ footer .call_back {
 }
 
 .popup__subtitle {
-  margin: 0 0 40px 0;
   font-size: 19px;
   font-weight: 400;
   text-align: center;
@@ -5260,6 +5272,7 @@ footer .call_back {
 }
 
 .popup-form {
+  margin: 40px 0 0 0;
   width: 316px;
 }
 
@@ -5633,6 +5646,17 @@ footer .call_back {
   margin: 50px 0 0;
 }
 
+.lightbox-types-items__title {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.lightbox-types-items__text {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 30px 0 0 0;
+}
+
 .lightbox-types__item {
   width: 48%;
   margin: 1%;
@@ -5656,5 +5680,9 @@ footer .call_back {
   display: block;
   width: 100%;
   border-radius: 17px;
+}
+
+.popup button.mfp-close, button.mfp-arrow {
+  border-radius: 100%;
 }
 /*# sourceMappingURL=main.css.map */

@@ -501,6 +501,7 @@ body
 // Start Header //
 #header
 	position: relative
+	background-attachment: fixed
 	background-image: url('../img/header_bg.jpg')
 	background-repeat: no-repeat
 	background-size: cover
@@ -1074,6 +1075,7 @@ header
 
 #product
 	position: relative
+	background-attachment: fixed
 	background-image: url('../img/productions_bg.jpg')
 	background-repeat: no-repeat
 	background-size: cover
@@ -1586,6 +1588,7 @@ header
 
 #preview
 	position: relative
+	background-attachment: fixed
 	background-image: url('../img/prev_bg.jpg')
 	background-repeat: no-repeat
 	background-size: cover
@@ -1910,6 +1913,7 @@ header
 				background-repeat: no-repeat
 
 #offering
+	background-attachment: fixed
 	position: relative
 	background-image: url('../img/offering_bg.jpg')
 	background-repeat: no-repeat
@@ -2017,8 +2021,7 @@ header
 			border-radius: 45px
 			padding: 15px
 			width: 80%
-			margin-top: 25px
-			margin-bottom: 10px
+			margin: 10px 0 0 0
 			font-weight: 700
 			position: relative
 			z-index: 2
@@ -2042,6 +2045,11 @@ header
 			width: 100%
 			text-align: center
 			font-size: 12px
+			margin: 20px 0 0
+			a
+				color: black
+				&:hover
+					color: $accsent
 
 footer
 	padding: 70px 0
@@ -2551,6 +2559,7 @@ footer
 
 #singl_page
 	position: relative
+	background-attachment: fixed
 	background-image: url('../img/offering_bg.jpg')
 	background-repeat: no-repeat
 	background-size: cover
@@ -3064,7 +3073,7 @@ footer
 
 #work-sheme
 	padding: 30px 0 70px
-	background: url('../img/work-sheme-bg.jpg') no-repeat center center / cover
+	background: fixed url('../img/work-sheme-bg.jpg') no-repeat center center / cover
 	color: white
 	.inner
 		max-width: 1196px
@@ -3200,7 +3209,6 @@ footer
 		font-weight: 700
 		font-size: 32px
 	&__subtitle
-		margin: 0 0 40px 0
 		font-size: 19px
 		font-weight: 400
 		text-align: center
@@ -3211,6 +3219,7 @@ footer
 		color: #7A88A3
 		margin: 16px 0 0 0
 	&-form
+		margin: 40px 0 0 0
 		width: 316px
 		&__title
 			color: #7C7E86
@@ -3461,6 +3470,14 @@ footer
 		justify-content: space-between
 		flex-wrap: wrap
 		margin: 50px 0 0
+		&__title
+			font-weight: 700
+			font-size: 24px
+		&__text
+			font-size: 18px
+			line-height: 1.6
+			margin: 30px 0 0 0
+	&__text
 	&__item
 		width: 48%
 		margin: 1%
@@ -3477,3 +3494,8 @@ footer
 		display: block
 		width: 100%
 		border-radius: 17px
+	
+
+.popup button.mfp-close, button.mfp-arrow
+	border-radius: 100%
+
